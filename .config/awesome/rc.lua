@@ -41,6 +41,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
 -- }}}
+require("collision")()
 
 
 
@@ -385,10 +386,10 @@ globalkeys = my_table.join(
               {description = "add new tag", group = "tag"}),
     awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end,
               {description = "rename tag", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(-1) end,
-              {description = "move tag to the left", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(1) end,
-              {description = "move tag to the right", group = "tag"}),
+--    awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(-1) end,
+--              {description = "move tag to the left", group = "tag"}),
+--    awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(1) end,
+--              {description = "move tag to the right", group = "tag"}),
     awful.key({ modkey, "Shift" }, "y", function () lain.util.delete_tag() end,
               {description = "delete tag", group = "tag"}),
     
@@ -778,9 +779,9 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = false})
-end)
+--client.connect_signal("mouse::enter", function(c)
+--    c:emit_signal("request::activate", "mouse_enter", {raise = false})
+--end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
