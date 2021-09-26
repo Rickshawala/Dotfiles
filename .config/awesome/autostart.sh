@@ -29,6 +29,7 @@ run barrier
 run discord &
 run nextcloud
 run kdeconnect-indicator
+run steam
 #you can set wallpapers in themes as well
 
 #run applications from startup

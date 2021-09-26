@@ -26,7 +26,7 @@ alias cat="bat"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
 function minecrafte
-	java -jar ~/minecraft-launcher/Tlauncher.jar
+	java -jar ~/.minecraft/minecraft-launcher/Tlauncher.jar
 end
 
 function honeygaine
