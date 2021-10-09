@@ -109,7 +109,8 @@ draw_bold_text_with_bright_colors: true
 # Font configuration
 font:
   # Normal (roman) font face
-   normal:
+  size: 15
+  normal:
     #family: noto sans mono black
     # Font family
     #
@@ -117,40 +118,39 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: RobotoMonoNerdFont
+    family: FantasqueSansMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Complete
     
   # Bold font face
-  #bold:
+  bold: 
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: FantasqueSansMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: FantasqueSansMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Italic
 
   # Bold italic font face
-  #bold_italic:
+  bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: FantasqueSansMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
@@ -392,6 +392,32 @@ schemes:
       magenta: '#6c71c4' # violet
       cyan:    '#93a1a1' # base1
       white:   '#fdf6e3' # base3
+
+  garuda: &garuda
+    primary:
+      background: '0x0a1124'
+      foreground: '0xeec49a'
+    cursor:
+      text:       '0x0a1124'
+      cursor:     '0xeec49a'
+    normal:
+      black:      '0x0a1124'
+      red:        '0x5F4149'
+      green:      '0xEB3247'
+      yellow:     '0xBC4349'
+      blue:       '0xF35645'
+      magenta:    '0xF6A73B'
+      cyan:       '0xFAD32F'
+      white:      '0xeec49a'
+    bright:
+      black:      '0xa6896b'
+      red:        '0x5F4149'
+      green:      '0xEB3247'
+      yellow:     '0xBC4349'
+      blue:       '0xF35645'
+      magenta:    '0xF6A73B'
+      cyan:       '0xFAD32F'
+      white:      '0xeec49a'      
 
 colors: *cyberpunk
 

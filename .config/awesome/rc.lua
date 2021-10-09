@@ -288,11 +288,11 @@ globalkeys = my_table.join(
         {description = "discord", group = "apps"}),
     
     -- Rofi / run a program
-    awful.key({ altkey }, "space", function () awful.util.spawn( "rofi -show drun" ) end,
-        {description = "Run program with rofi", group = "apps"}),
+    awful.key({ modkey }, "space", function () awful.util.spawn( "dmenu_run -l 15" ) end,
+        {description = "Run program with dmenu", group = "apps"}),
      
     -- Rofi- alt tab
-    awful.key({ altkey }, "Tab", function () awful.util.spawn( "rofi -show window" ) end,
+    awful.key({ modkey}, "Tab", function () awful.util.spawn( "rofi -show window" ) end,
         {description = "Switch Windows with Rofi", group = "apps"}),
       
     -- Pcmanfm
@@ -311,7 +311,7 @@ globalkeys = my_table.join(
       {description = "exit", group = "hotkeys"}),
 
     awful.key({ modkey }, "Escape", function () awful.util.spawn( "xkill" ) end,
-        {description = "Kill proces", group = "hotkeys"}),
+        {description = "Kill process", group = "hotkeys"}),
 
     -- Hotkeys Awesome
 
@@ -400,7 +400,7 @@ globalkeys = my_table.join(
     awful.key({}, "Print", function () awful.util.spawn_with_shell("flameshot gui") end,
               {description = terminal, group = "super"}),
     -- Standard program
-    awful.key({ modkey,           }, "space", function () awful.spawn(terminal) end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = terminal, group = "super"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -421,7 +421,7 @@ globalkeys = my_table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "Return", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),

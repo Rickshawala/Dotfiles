@@ -22,7 +22,6 @@ run picom
 #run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run numlockx on
 #run volumeicon
-run nitrogen --restore
 run dunst
 run openrgb &
 run barrier
@@ -30,6 +29,9 @@ run discord &
 run nextcloud
 run kdeconnect-indicator
 run steam
+run ~/Documents/awesomewm.sh
+run nitrogen --restore
+run pa-applet
 #you can set wallpapers in themes as well
 
 #run applications from startup

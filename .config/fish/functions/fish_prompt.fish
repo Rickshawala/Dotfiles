@@ -13,8 +13,14 @@ function fish_prompt
     set_color normal
 end
 
+alias ls="ls -lagh | lolcat"
+
+alias DID_I_FUCKING_STUTTER="sudo !!"
+
+alias lsd="lsd -lah"
+
 function ngroke
-	ngrok tcp -region in 25565
+        ngrok tcp -region in 25565
 end
 
 alias ls="ls -lagh | lolcat"
@@ -25,10 +31,10 @@ alias cat="bat"
 
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
+alias nano="vim"
+
 function minecrafte
-	java -jar ~/.minecraft/minecraft-launcher/Tlauncher.jar
+        java -jar ~/.minecraft/minecraft-launcher/Tlauncher.jar
 end
 
-function honeygaine
-	~/Documents/honeygain.sh
-end
+alias cat="bat"
