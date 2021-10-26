@@ -113,7 +113,7 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser3          = "chromium -no-default-browser-check"
+local browser3          = "firefox"
 local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "code-insiders"
 local filemanager       = "pcmanfm"
@@ -124,10 +124,10 @@ local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
-awful.util.tagnames = {  "", "", "", "", ""}
+--awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
---awful.util.tagnames = { "www", "edit", "gimp", "inkscape", "music" }
+awful.util.tagnames = { "steam", "discord", "firefox", "terminal", "spotify", "office", "more1", "more2" }
 -- Use this : https://fontawesome.com/cheatsheet
 --awful.util.tagnames = { "", "", "", "", "" }
 --
@@ -248,7 +248,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
 
 
 
--- {{{ Screen
+--{{{ Screen
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", function(s)
     -- Wallpaper
@@ -282,7 +282,20 @@ globalkeys = my_table.join(
     -- firefox
     awful.key({ modkey }, "q", function () awful.util.spawn( "firefox" ) end,
         {description = "firefox", group = "apps"}),
-    
+
+    -- emacs
+    awful.key({ modkey }, "z", function () awful.util.spawn( "emacs" ) end,
+        {description = "emacs", group = "apps"}),
+
+    -- spotify
+    awful.key({ modkey }, "r", function () awful.util.spawn( "spotify" ) end,
+        {description = "spotify", group = "apps"}),
+
+    -- thunderbird
+    awful.key({ modkey }, "w", function () awful.util.spawn( "thunderbird" ) end,
+        {description = "thunderbird", group = "apps"}),
+
+
     -- Discord
     awful.key({ modkey }, "d", function () awful.util.spawn( "discord" ) end,
         {description = "discord", group = "apps"}),

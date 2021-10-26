@@ -7,31 +7,33 @@ function run {
   fi
 }
 
-#run xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
-#run xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
-#run xrandr --output LVDS1 --mode 1366x768 --rotate normal --output VGA1 --primary --mode 1920x1080 --rotate normal --right-of LVDS1
+xrandr --output DP-2 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --right-of DP-2
+run nitrogen --random --set-scaled --head=0
+run nitrogen --random --set-scaled --head=1
 
-#autorandr horizontal
-run nm-applet
-#run caffeine
-#run pamac-tray
-run variety
-run xfce4-power-manager
-run blueberry-tray
 run picom
+run lxsession
+#run variety
+run /home/alokesh/Documents/sawpbuttons.sh
+#run xfce4-power-manager
+#run blueberry-tray
+#run numlockx on
+#run dunst
+#run barrier
+#run discord &
+#run steam
+#run pa-applet
+#run nm-applet
+#run ~/Documents/awesomewm.sh
+#run pamac-tray
+run caffeine
+#autorandr horizontal
 #run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-run numlockx on
 #run volumeicon
-run dunst
-run openrgb &
-run barrier
-run discord &
+run openrgb -p eafin.orp
 run nextcloud
 run kdeconnect-indicator
-run steam
-run ~/Documents/awesomewm.sh
-run nitrogen --restore
-run pa-applet
+run keepassxc
 #you can set wallpapers in themes as well
 
 #run applications from startup

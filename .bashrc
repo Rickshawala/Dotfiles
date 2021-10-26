@@ -3,7 +3,7 @@
 #
 
 EDITOR = vim
-VISUAL = vim
+VISUAL = emacs
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -14,6 +14,6 @@ PS1='[\u@\h \W]\$ '
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
-cowsay "Fuck You"
+cowsay "Fuck You" | lolcat
 
 source /home/alokesh/.config/broot/launcher/bash/br

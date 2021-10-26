@@ -35,7 +35,7 @@ local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/nordish"
 
 -- Sets up the wallpaper 
-theme.wallpaper                                 = theme.dir .. "/wallpaper.jpg"
+--theme.wallpaper                                 = theme.dir .. "/wallpaper.jpg"
 
 -- Font
 theme.font                                      = "JetBrainsMono Nerd Font 11"

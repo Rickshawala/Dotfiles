@@ -66,7 +66,7 @@ h.gray                                          = "#5a6169"
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-blue"
-theme.wallpaper                                 = theme.dir .. "/wallpaper.jpg"
+--theme.wallpaper                                 = theme.dir .. "/wallpaper.jpg"
 
 theme.font                                      = "Comic Mono 10"
 theme.useless_gap                               = 8

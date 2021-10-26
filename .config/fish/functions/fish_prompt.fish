@@ -15,15 +15,17 @@ end
 
 alias ls="ls -lagh | lolcat"
 
-alias DID_I_FUCKING_STUTTER="sudo !!"
+alias btw="sudo"
+
+alias brag="neofetch"
+
+alias updatee="sudo aura -Syyu && sudo aura -Ayyu"
 
 alias lsd="lsd -lah"
 
 function ngroke
         ngrok tcp -region in 25565
 end
-
-alias ls="ls -lagh | lolcat"
 
 alias lsd="lsd -lah"
 
@@ -32,9 +34,3 @@ alias cat="bat"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
 alias nano="vim"
-
-function minecrafte
-        java -jar ~/.minecraft/minecraft-launcher/Tlauncher.jar
-end
-
-alias cat="bat"
