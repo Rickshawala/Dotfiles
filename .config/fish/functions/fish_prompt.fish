@@ -31,7 +31,7 @@ alias lsd="lsd -lah"
 
 alias cat="bat"
 
-alias dotfilese="/usr/bin/git --git-dir=/mnt/games/gitdir/dotfiles/ --work-tree=$HOME"
+alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
 alias nano="vim"
 

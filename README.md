@@ -25,3 +25,6 @@ Home:
   
 .config/old-rice
   There's a readme there
+
+.config/outsiders
+  There's a readme there
