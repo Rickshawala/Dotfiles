@@ -13,7 +13,7 @@ function fish_prompt
     set_color normal
 end
 
-alias ls="ls -lagh | lolcat"
+alias ls="ls -lAgh | lolcat"
 
 alias btw="sudo"
 
@@ -34,3 +34,9 @@ alias cat="bat"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
 alias nano="vim"
+
+alias neofetch="neofetch --cpu_temp C --ascii_distro windows7"
+
+alias archup="sudo aura -Syyu"
+
+alias aurup="sudo aura -Ayyu"

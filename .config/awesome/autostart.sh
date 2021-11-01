@@ -8,13 +8,14 @@ function run {
 }
 
 xrandr --output DP-2 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --right-of DP-2
-run nitrogen --random --set-scaled --head=0
-run nitrogen --random --set-scaled --head=1
+#run nitrogen --random --set-scaled --head=0
+#run nitrogen --random --set-scaled --head=1
+feh --bg-fill --randomize ~/Pictures/wallpapers
 
 run picom
 run lxsession
 #run variety
-run /home/alokesh/Documents/sawpbuttons.sh
+run /home/alokesh/Documents/sh/sawpbuttons.sh
 #run xfce4-power-manager
 #run blueberry-tray
 #run numlockx on

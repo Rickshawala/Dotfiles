@@ -301,8 +301,8 @@ globalkeys = my_table.join(
         {description = "discord", group = "apps"}),
     
     -- Rofi / run a program
-    awful.key({ modkey }, "space", function () awful.util.spawn( "dmenu_run -l 15" ) end,
-        {description = "Run program with dmenu", group = "apps"}),
+    awful.key({ modkey }, "space", function () awful.util.spawn( "rofi -show drun" ) end,
+        {description = "Run program with rofi", group = "apps"}),
      
     -- Rofi- alt tab
     awful.key({ modkey}, "Tab", function () awful.util.spawn( "rofi -show window" ) end,
