@@ -15,7 +15,15 @@ end
 
 alias ls="ls -lAgh | lolcat"
 
+alias ip a="ip -c a"
+
 alias btw="sudo"
+
+alias h="fuck"
+
+alias :wq="exit"
+
+alias :q="exit"
 
 alias brag="neofetch"
 
