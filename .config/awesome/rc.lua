@@ -284,7 +284,11 @@ globalkeys = my_table.join(
         {description = "firefox", group = "apps"}),
 
     -- emacs
-    awful.key({ modkey }, "z", function () awful.util.spawn( "emacs" ) end,
+    awful.key({ modkey }, "z", function () awful.util.spawn( "emacsclient" ) end,
+        {description = "emacs", group = "apps"}),
+
+    -- xkill
+    awful.key({ altkey }, "4", function () awful.util.spawn( "xkill" ) end,
         {description = "emacs", group = "apps"}),
 
     -- spotify

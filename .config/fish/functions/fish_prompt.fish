@@ -15,7 +15,7 @@ end
 
 alias ls="ls -lAgh | lolcat"
 
-alias ip a="ip -c a"
+alias ipa="ip -c a"
 
 alias btw="sudo"
 
@@ -27,7 +27,7 @@ alias :q="exit"
 
 alias brag="neofetch"
 
-alias updatee="sudo aura -Syyu && sudo aura -Ayyu"
+alias updatee="sudo aura -Syyu --noconfirm && sudo aura -Ayyu --noconfirm"
 
 alias lsd="lsd -lah"
 
@@ -44,7 +44,3 @@ alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias nano="vim"
 
 alias neofetch="neofetch --cpu_temp C --ascii_distro windows7"
-
-alias archup="sudo aura -Syyu"
-
-alias aurup="sudo aura -Ayyu"

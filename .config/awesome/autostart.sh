@@ -35,6 +35,7 @@ run openrgb -p eafin.orp
 run nextcloud
 run kdeconnect-indicator
 run keepassxc
+run emacs --daemon
 #you can set wallpapers in themes as well
 
 #run applications from startup

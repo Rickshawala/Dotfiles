@@ -157,3 +157,5 @@ colorscript random
 #end
 
 thefuck --alias | source
+
+starship init fish | source

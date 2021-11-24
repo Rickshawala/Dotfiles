@@ -1,6 +1,6 @@
 {
-    "version": "1.2.4",
-    "emoteVersion": "v1.2.4",
+    "version": "1.3.0",
+    "emoteVersion": "v1.3.0",
     "drawerStates": {
         "settings": {
             "addons": false,
@@ -10,5 +10,9 @@
             "developer": false,
             "window": true
         }
+    },
+    "favoriteEmotes": {
+        "Sussy": "https://cdn.frankerfacez.com/emoticon/167086/1",
+        "Kaka": "https://cdn.frankerfacez.com/emoticon/179528/1"
     }
 }
