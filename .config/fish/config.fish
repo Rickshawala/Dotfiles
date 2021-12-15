@@ -4,7 +4,7 @@ set EDITOR "vim"
 set VISUAL "emacs -c -a emacs"
 set TERM "alacritty"
 
-thefuck --alias | source
+#thefuck --alias | source
 
 if test -n "$DESKTOP_SESSION"
     set -x (gnome-keyring-daemon --start | string split "=")
@@ -48,8 +48,9 @@ end
 ##ALIAS
 
 #ls'es
-alias ls="ls -lAgh | lolcat"
-alias lsd="lsd -lah"
+#alias ls="ls -lAgh | lolcat"
+#alias ls="lsd -lAh | lolcat"
+alias ls="lsd -lah"
 
 #useful
 alias ipa="ip -c a"
@@ -64,6 +65,7 @@ alias h="fuck"
 alias :wq="exit"
 alias :q="exit"
 alias brag="neofetch --cpu_temp C --ascii_distro windows7"
+alias klear="clear" #kde users lol
 
 colorscript random 
 

@@ -26,8 +26,8 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 
 -- Notification library
-local naughty       = require("naughty")
-naughty.config.defaults['icon_size'] = 130
+--local naughty       = require("naughty")
+--naughty.config.defaults['icon_size'] = 130
 
 --local menubar       = require("menubar")
 
@@ -45,30 +45,56 @@ require("collision")()
 
 
 
+---- {{{ Error handling
+---- Check if awesome encountered an error during startup and fell back to
+---- another config (This code will only ever execute for the fallback config)
+--if awesome.startup_errors then
+--    naughty.notify({ preset = naughty.config.presets.critical,
+--                     title = "Sadly, an error happened during startup!!! notify this to the rice creator plsss",
+--                     text = awesome.startup_errors })
+--end
+--
+---- Handle runtime errors after startup
+--do
+--    local in_error = false
+--    awesome.connect_signal("debug::error", function (err)
+--        if in_error then return end
+--        in_error = true
+--
+--        naughty.notify({ preset = naughty.config.presets.critical,
+--                         title = "Sadly, an error happened!! notify this to the rice creator plsss",
+--                         text = tostring(err) })
+--        in_error = false
+--    end)
+--end
+---- }}}
+--
+
+--Notifications with dunst over naughty
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Sadly, an error happened during startup!!! notify this to the rice creator plsss",
+                     title = "Oops, there were errors during startup!",
                      text = awesome.startup_errors })
 end
 
 -- Handle runtime errors after startup
 do
-    local in_error = false
-    awesome.connect_signal("debug::error", function (err)
+   local in_error = false
+   awesome.connect_signal("debug::error", function (err)
+        -- Make sure we don't go into an endless error loop
         if in_error then return end
         in_error = true
 
         naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Sadly, an error happened!! notify this to the rice creator plsss",
+                         title = "Oops, an error happened!",
                          text = tostring(err) })
         in_error = false
     end)
 end
 -- }}}
-
 
 
 -- {{{ Autostart windowless processes
@@ -115,9 +141,9 @@ local modkey1      = "Control"
 --change these variables if you want
 local browser3          = "firefox"
 local editor            = os.getenv("EDITOR") or "vim"
-local editorgui         = "code-insiders"
+local editorgui         = "kate"
 local filemanager       = "pcmanfm"
-local mailclient        = "evolution"
+local mailclient        = "thunderbird"
 local mediaplayer       = "spotify"
 local terminal          = "alacritty"
 local virtualmachine    = "virtualbox"
@@ -127,7 +153,7 @@ awful.util.terminal = terminal
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
-awful.util.tagnames = { "steam", "discord", "firefox", "terminal", "spotify", "office", "more1", "more2" }
+awful.util.tagnames = { "games", "discord", "firefox", "terminal", "spotify", "zoom", "more1", "more2" }
 -- Use this : https://fontawesome.com/cheatsheet
 --awful.util.tagnames = { "", "", "", "", "" }
 --
@@ -266,7 +292,7 @@ end)
 awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s)
     s.systray = wibox.widget.systray()
     s.systray.visible = true
- end)
+end)
 
 -- {{{ Mouse bindings
 root.buttons(my_table.join(
@@ -288,17 +314,20 @@ globalkeys = my_table.join(
         {description = "emacs", group = "apps"}),
 
     -- xkill
-    awful.key({ altkey }, "4", function () awful.util.spawn( "xkill" ) end,
-        {description = "emacs", group = "apps"}),
+    awful.key({ modkey, "Shift" }, "c", function () awful.util.spawn( "xkill" ) end,
+        {description = "xkill", group = "apps"}),
 
     -- spotify
-    awful.key({ modkey }, "r", function () awful.util.spawn( "spotify" ) end,
+    awful.key({ modkey }, "r", function () awful.util.spawn( "snap run spotify" ) end,
         {description = "spotify", group = "apps"}),
 
-    -- thunderbird
-    awful.key({ modkey }, "w", function () awful.util.spawn( "thunderbird" ) end,
-        {description = "thunderbird", group = "apps"}),
+    -- minecraft
+    awful.key({ modkey }, "t", function () awful.util.spawn( "minecraft-launcher" ) end,
+        {description = "minecraft", group = "apps"}),
 
+    -- flameshot
+    awful.key({ }, "Print", function () awful.util.spawn( "flameshot gui" ) end,
+        {description = "flameshot- screenshot utility" , group = "apps"}),
 
     -- Discord
     awful.key({ modkey }, "d", function () awful.util.spawn( "discord" ) end,
@@ -306,29 +335,37 @@ globalkeys = my_table.join(
     
     -- Rofi / run a program
     awful.key({ modkey }, "space", function () awful.util.spawn( "rofi -show drun" ) end,
-        {description = "Run program with rofi", group = "apps"}),
+        {description = "Run program with rofi", group = "hotkeys"}),
      
     -- Rofi- alt tab
     awful.key({ modkey}, "Tab", function () awful.util.spawn( "rofi -show window" ) end,
-        {description = "Switch Windows with Rofi", group = "apps"}),
+        {description = "Switch Windows with Rofi", group = "hotkeys"}),
       
     -- Pcmanfm
     awful.key({ modkey }, "e", function () awful.util.spawn( "pcmanfm" ) end,
         {description = "Pcmanfm", group = "apps"}),
   
-    -- Abre Office
+    -- Libre Office
     awful.key({ modkey }, "g", function () awful.util.spawn( "libreoffice" ) end,
         {description = "Office", group = "apps"}),
     
     
-    awful.key({ modkey }, "v", function () awful.util.spawn( "pavucontrol" ) end,
-        {description = "pulseaudio control", group = "super"}),
-    
+    -- xkill
     awful.key({ modkey }, "x",  function () logout_popup.launch() end,
       {description = "exit", group = "hotkeys"}),
 
-    awful.key({ modkey }, "Escape", function () awful.util.spawn( "xkill" ) end,
-        {description = "Kill process", group = "hotkeys"}),
+    -- Scratchpad
+     awful.key({ modkey, "Shift" }, "Return", function () awful.util.spawn( "tdrop -am -x 50% -y 50 -w 1341 -h 980 alacritty" ) end,
+ 	{description = "Scratchpad Alacritty", group = "scratchpad"}),
+
+     --awful.key({ modkey }, "r", function () awful.util.spawn( "tdrop -am -w 1920 snap run spotify" ) end,
+-- 	{description = "Scratchpad Spotify", group = "scratchpad"}),
+
+     awful.key({ modkey }, "w", function () awful.util.spawn( "tdrop -am -x 15% -y 50 -w 1341 -h 980 thunderbird" ) end,
+        {description = "Scratchpad Thunderbird", group = "scratchpad"}),
+    -- Pavucontrol
+    awful.key({ modkey }, "v", function () awful.util.spawn( "tdrop -am -x 15% -y 50 -w 1341 -h 800 pavucontrol" ) end,
+        {description = "Scratchpad pulseaudio control", group = "scratchpad"}),
 
     -- Hotkeys Awesome
 
@@ -362,9 +399,9 @@ globalkeys = my_table.join(
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the next screen", group = "screen"}),
+              {description = "focus the next screen", group = "client"}),
     awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
-              {description = "focus the previous screen", group = "screen"}),
+              {description = "focus the previous screen", group = "client"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
     awful.key({ modkey1,           }, "Tab",
@@ -393,32 +430,29 @@ globalkeys = my_table.join(
     end, {description = "Toggle systray visibility", group = "awesome"}),
 
     -- On the fly useless gaps change
-    awful.key({ altkey, "Control" }, "j", function () lain.util.useless_gaps_resize(1) end,
-              {description = "increment useless gaps", group = "tag"}),
-    awful.key({ altkey, "Control" }, "h", function () lain.util.useless_gaps_resize(-1) end,
-              {description = "decrement useless gaps", group = "tag"}),
+--    awful.key({ altkey, "Control" }, "j", function () lain.util.useless_gaps_resize(1) end,
+--              {description = "increment useless gaps", group = "tag"}),
+--    awful.key({ altkey, "Control" }, "h", function () lain.util.useless_gaps_resize(-1) end,
+--              {description = "decrement useless gaps", group = "tag"}),
 
     -- Dynamic tagging
-    awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag() end,
-              {description = "add new tag", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end,
-              {description = "rename tag", group = "tag"}),
+--    awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag() end,
+--              {description = "add new tag", group = "tag"}),
+--    awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end,
+--              {description = "rename tag", group = "tag"}),
 --    awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(-1) end,
 --              {description = "move tag to the left", group = "tag"}),
 --    awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(1) end,
 --              {description = "move tag to the right", group = "tag"}),
-    awful.key({ modkey, "Shift" }, "y", function () lain.util.delete_tag() end,
-              {description = "delete tag", group = "tag"}),
-    
-    awful.key({}, "F1", function () awful.util.spawn_with_shell("python3 $HOME/.config/awesome/keyboard.py") end,
-              {description = terminal, group = "super"}),
-    
+--    awful.key({ modkey, "Shift" }, "y", function () lain.util.delete_tag() end,
+--              {description = "delete tag", group = "tag"}),
+--    
+--    awful.key({}, "F1", function () awful.util.spawn_with_shell("python3 $HOME/.config/awesome/keyboard.py") end,
+--              {description = terminal, group = "super"}),
 
-    awful.key({}, "Print", function () awful.util.spawn_with_shell("flameshot gui") end,
-              {description = terminal, group = "super"}),
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = terminal, group = "super"}),
+    awful.key({ modkey,}, "Return", function () awful.spawn(terminal) end,
+              {description = terminal, group = "apps"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     -- awful.key({ modkey, "Shift"   }, "x", awesome.quit,
@@ -438,9 +472,9 @@ globalkeys = my_table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "Return", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey, altkey }, "Return", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Control"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
@@ -453,45 +487,6 @@ globalkeys = my_table.join(
                   end
               end,
               {description = "restore minimized", group = "client"})
-	      
-	      
---        -- ALSA volume control
---    --awful.key({ modkey1 }, "Up",
---    awful.key({ }, "F4",
---        function ()
---            awful.spawn.with_shell("python3 $HOME/.config/awesome/volume.py set +5%")
---        end),
---    --awful.key({ modkey1 }, "Down",
---    awful.key({ }, "F3",
---        function ()
---            awful.spawn.with_shell("python3 $HOME/.config/awesome/volume.py set -5%") 
---        end),
---    awful.key({ }, "XF86AudioMute",
---        function ()
---            os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
---            beautiful.volume.update()
---        end),
---    awful.key({ modkey1, "Shift" }, "m",
---        function ()
---            os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
---            beautiful.volume.update()
---        end),
---    awful.key({ modkey1, "Shift" }, "0",
---        function ()
---            os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
---            beautiful.volume.update()
---        end)
-
-    --Media keys supported by vlc, spotify, audacious, xmm2, ...
-    --awful.key({}, "XF86AudioPlay", function() awful.util.spawn("playerctl play-pause", false) end),
-    --awful.key({}, "XF86AudioNext", function() awful.util.spawn("playerctl next", false) end),
-    --awful.key({}, "XF86AudioPrev", function() awful.util.spawn("playerctl previous", false) end),
-    --awful.key({}, "XF86AudioStop", function() awful.util.spawn("playerctl stop", false) end),
-
---Media keys supported by mpd.
-    
-    --]]
---)
 )
 
 clientkeys = my_table.join(
@@ -806,4 +801,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 
 --Gaps 
-beautiful.useless_gap = 7
+beautiful.useless_gap = 10

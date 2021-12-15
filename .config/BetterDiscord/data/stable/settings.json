@@ -7,11 +7,11 @@
         "mediaKeys": false
     },
     "appearance": {
-        "twentyFourHour": true,
-        "hideGiftButton": true,
-        "hideGIFButton": true,
+        "twentyFourHour": false,
+        "hideGiftButton": false,
+        "hideGIFButton": false,
         "minimalMode": false,
-        "coloredText": true
+        "coloredText": false
     },
     "addons": {
         "addonErrors": true,
@@ -20,7 +20,7 @@
     },
     "customcss": {
         "customcss": true,
-        "liveUpdate": true,
+        "liveUpdate": false,
         "openAction": "settings"
     },
     "developer": {
@@ -31,7 +31,7 @@
         "debugLogs": false
     },
     "window": {
-        "transparency": true,
+        "transparency": false,
         "removeMinimumSize": false,
         "frame": false
     }

@@ -15,18 +15,19 @@ feh --bg-fill --randomize ~/Pictures/wallpapers
 run picom
 run lxsession
 #run variety
-run /home/alokesh/Documents/sh/sawpbuttons.sh
+run /home/alokesh/Documents/urmillabot/start.sh
 #run xfce4-power-manager
 #run blueberry-tray
 #run numlockx on
-#run dunst
+run dunst
 #run barrier
-#run discord &
+run discord &
 #run steam
-#run pa-applet
-#run nm-applet
+run pa-applet
+run flameshot
+run nm-applet
 #run ~/Documents/awesomewm.sh
-#run pamac-tray
+run pamac-tray
 run caffeine
 #autorandr horizontal
 #run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
