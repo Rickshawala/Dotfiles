@@ -50,18 +50,19 @@ end
 #ls'es
 #alias ls="ls -lAgh | lolcat"
 #alias ls="lsd -lAh | lolcat"
-alias ls="lsd -lah"
+alias lsd="lsd -lah"
+alias ls="exa -al --color=always --group-directories-first --icons"
 
 #useful
 alias ipa="ip -c a"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-alias updatee="sudo aura -Syyu --noconfirm && sudo aura -Ayyu --noconfirm"
+alias updatee="sudo aura -Syu --noconfirm && sudo aura -Ayu --noconfirm"
 alias nano="vim"
 alias cat="bat --style header --style rules --style snip --style changes --style header"
 
 #fun
 alias btw="sudo"
-alias h="fuck"
+alias h="/home/wolfgang/.local/bin/fuck"
 alias :wq="exit"
 alias :q="exit"
 alias brag="neofetch --cpu_temp C --ascii_distro windows7"

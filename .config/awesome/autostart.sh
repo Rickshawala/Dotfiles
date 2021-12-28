@@ -7,7 +7,7 @@ function run {
   fi
 }
 
-xrandr --output DP-2 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --right-of DP-2
+xrandr --output DP-4 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --right-of DP-4 --scale 1.5x1.5
 #run nitrogen --random --set-scaled --head=0
 #run nitrogen --random --set-scaled --head=1
 feh --bg-fill --randomize ~/Pictures/wallpapers
@@ -15,7 +15,8 @@ feh --bg-fill --randomize ~/Pictures/wallpapers
 run picom
 run lxsession
 #run variety
-run /home/alokesh/Documents/urmillabot/start.sh
+run /mnt/games/urmillabot/start.sh
+run emacs --daemon
 #run xfce4-power-manager
 #run blueberry-tray
 #run numlockx on
@@ -37,6 +38,7 @@ run nextcloud
 run kdeconnect-indicator
 run keepassxc
 run emacs --daemon
+run secret-tool lookup keepass allah | keepassxc --pw-stdin /home/wolfgang/Documents/keepass.kdbx
 #you can set wallpapers in themes as well
 
 #run applications from startup

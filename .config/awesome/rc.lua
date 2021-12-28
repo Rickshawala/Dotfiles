@@ -310,7 +310,7 @@ globalkeys = my_table.join(
         {description = "firefox", group = "apps"}),
 
     -- emacs
-    awful.key({ modkey }, "z", function () awful.util.spawn( "emacsclient" ) end,
+    awful.key({ modkey }, "z", function () awful.util.spawn( "emacsclient -ce -a emacs" ) end,
         {description = "emacs", group = "apps"}),
 
     -- xkill
@@ -318,7 +318,7 @@ globalkeys = my_table.join(
         {description = "xkill", group = "apps"}),
 
     -- spotify
-    awful.key({ modkey }, "r", function () awful.util.spawn( "snap run spotify" ) end,
+    awful.key({ modkey }, "r", function () awful.util.spawn( "spotify" ) end,
         {description = "spotify", group = "apps"}),
 
     -- minecraft
