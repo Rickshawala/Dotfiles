@@ -1,1 +1,25 @@
-{}
+{
+    "BDFDB": true,
+    "ZeresPluginLibrary": false,
+    "BetterRoleColors": true,
+    "BetterVolume": true,
+    "CallTimeCounter": true,
+    "CreationDate": true,
+    "DoubleClickToEdit": true,
+    "FriendNotifications": true,
+    "HideDisabledEmojis": true,
+    "ImageUtilities": true,
+    "AppNotifications": true,
+    "InvisibleTyping": true,
+    "LastMessageDate": true,
+    "NoSpotifyPause": true,
+    "PluginRepo": true,
+    "ServerDetails": true,
+    "ShowBadgesInChat": true,
+    "ShowHiddenChannels": false,
+    "SplitLargeMessages": true,
+    "SpotifyControls": true,
+    "TypingUsersAvatars": true,
+    "Animations": true,
+    "SpotifyListenAlong": true
+}

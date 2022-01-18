@@ -4,7 +4,7 @@ set EDITOR "vim"
 set VISUAL "emacs -c -a emacs"
 set TERM "alacritty"
 
-#thefuck --alias | source
+thefuck --alias | source
 
 if test -n "$DESKTOP_SESSION"
     set -x (gnome-keyring-daemon --start | string split "=")
@@ -58,11 +58,13 @@ alias ipa="ip -c a"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias updatee="sudo aura -Syu --noconfirm && sudo aura -Ayu --noconfirm"
 alias nano="vim"
-alias cat="bat --style header --style rules --style snip --style changes --style header"
+#alias cat="bat --style header --style rules --style snip --style changes --style header"
+alias mv="mv -iv"
+alias cp="cp -iv"
 
 #fun
 alias btw="sudo"
-alias h="/home/wolfgang/.local/bin/fuck"
+alias h="fuck"
 alias :wq="exit"
 alias :q="exit"
 alias brag="neofetch --cpu_temp C --ascii_distro windows7"

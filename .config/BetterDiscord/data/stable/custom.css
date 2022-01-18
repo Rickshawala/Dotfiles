@@ -1,0 +1,264 @@
+/* compact reactions */
+  
+.message-2qnXI6:hover .reactionCount-2mvXRV {
+     font-size: 14px;
+     transform: translate(0px);
+     transition-delay: 0s;
+}
+ .message-2qnXI6:hover .reaction-1hd86g {
+     max-width: 90px;
+     width: auto;
+}
+ .reaction-1hd86g {
+     max-width: 30px;
+     transition: 0.5s;
+     transition-timing-function: ease-out;
+}
+ .reactionCount-2mvXRV {
+     font-size: 0px;
+     transition-duration: 0.2s;
+     transform: translate(-20px);
+     transition-timing-function: ease-out;
+     transition-delay: 0.1s;
+}
+
+
+
+
+
+
+/* Rainbow Server Name & Settings  */
+
+@keyframes rainbow-server-settings {
+  from {color: #33FF00}
+  25%  {color: #FFE600}
+  50%  {color: red}
+  75%  {color: #EA00FF}
+  100% {color: #008CFF}
+}
+
+.button-1w5pas {
+  animation: rainbow-server-settings 4s ease-in-out infinite;
+}
+.name-1jkAdW{
+  animation: rainbow-server-settings 4s ease-in-out infinite; 
+}
+
+
+
+
+
+
+
+/* Rainbow names and text in chat */
+
+.username-1A8OIy,
+
+.markup-2BOw-j {
+  animation: rainbow 5s linear 0s infinite normal
+}
+@keyframes rainbow {
+    0%    {color: #ff0000}
+    12%   {color: #ffbf00}
+    25%   {color: #80ff00}
+    37%   {color: #00ff40}
+    50%   {color: #00ffff}
+    62%   {color: #0040ff}
+    75%   {color: #8000ff}
+    87%   {color: #eb34bd}
+    100%  {color: #ff0000}
+}
+
+
+
+
+
+
+
+
+/* Hide blocked messages */
+.groupStart-23k01U:not(.cozyMessage-3V1Y8y):not(.backgroundFlash-24qWLN) {display: none}
+
+
+/*Rainbow wave mentions thx to Strencher & Luke*/
+
+html .mention.wrapper-3WhCwL.mention.interactive{
+    background-image: linear-gradient(to left,rgb(51, 255, 0), rgb(255, 230, 0), red, rgb(234, 0, 255), rgb(0, 140, 255), rgb(51, 255, 0));
+    animation: gradient-text 15s linear infinite;
+    background-size: 500% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+    z-index: 1;
+}
+@keyframes gradient-text {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 500% 0;
+    }
+}
+.channelIcon-1MN1lz {
+    display: none;
+}
+    
+.iconMention-1_KJ_B::before {
+    content: "#";
+}
+    
+#app-mount .iconMention-1_KJ_B {
+    padding-left: 2px;
+}
+
+
+
+
+
+
+
+
+/* Rainbow User ID */
+
+.subtext-3CDbHg,
+.customStatus-3tC2ig,
+.hovered-d5PMVU,
+.title-eS5yk3 {
+    background-image: linear-gradient(to left,rgb(51, 255, 0), rgb(255, 230, 0), red, rgb(234, 0, 255), rgb(0, 140, 255), rgb(51, 255, 0));
+    animation: gradient-border 4s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+    z-index: 1;
+}
+@keyframes gradient-border {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: 100% 0;
+}
+}
+
+
+
+
+
+
+
+/* buttons animated */
+
+.button-14-BFJ:hover .contents-18-Yxp {
+  animation: UserModalButtons 0.5s normal ease;
+}
+.container-3baos1 .noWrap-3jynv6 {
+  width: 100px;
+  opacity: 1;
+}
+.button-14-BFJ {
+  transition: 0.2s;
+}
+.button-14-BFJ:hover {
+  padding-bottom: 0px;
+  transition: 0.2;
+}
+@keyframes UserModalButtons {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+
+
+
+
+/* Hover Channels animated */
+
+.mainContent-u_9PKf:hover {
+  animation: UserModalButtons 0.5s normal ease;}
+.mainContent-u_9PKf .noWrap-3jynv6 {width: 100px;opacity: 1;}
+.mainContent-u_9PKf {transition: 0.2s;}
+.mainContent-u_9PKf:hover {transition: 0.2;}
+@keyframes UserModalButtons {
+  0% {
+    transform: translateY(0px);
+  }
+  45% {
+    transform: translateY(-5px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+
+
+
+/* Profile Connection Borders */
+
+.connectedAccountIcon-3_EQqg ~ div::before {
+    content: "";
+    top: 0; bottom: 0; left: 0; right: 0;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    display: block;
+    pointer-events: none;
+}
+
+.connectedAccount-2Jb-Z0 {
+    overflow: hidden;
+    position: relative;
+}
+/* Spotify */
+.connectedAccountIcon-3_EQqg[src="/assets/7906941c1205ba04b6921f2af4c6a170.png"] ~ div::before {--border-color: #1ED760;}
+/* Github */
+.connectedAccountIcon-3_EQqg[src="/assets/afb09840b496f2c49032075a33da7fab.png"] ~ div::before {--border-color: #fff;}
+/* Twitch */
+.connectedAccountIcon-3_EQqg[src="/assets/007e5cb8871cf0987283c6307ce7fed0.png"] ~ div::before {--border-color: #563194;}
+/* Twitter */
+.connectedAccountIcon-3_EQqg[src="/assets/6919f2a578d91a5d033b639f0fb52b3d.png"] ~ div::before {--border-color: #0099E4;}
+/* xbox */
+.connectedAccountIcon-3_EQqg[src="/assets/746aba83c88f087e3eef23a47dd57923.png"] ~ div::before {--border-color: #5EC220;}
+/* Reddit */
+.connectedAccountIcon-3_EQqg[src="/assets/b46c06eb71dc56a41432512168e6759a.png"] ~ div::before {--border-color: #FF4500;}
+/* Battle.net */
+.connectedAccountIcon-3_EQqg[src="/assets/7b964801001dd47cc05a91d6dacf6075.png"] ~ div::before {--border-color: #0099E4;}
+/* Steam */
+.connectedAccountIcon-3_EQqg[src="/assets/a9c26c8bebe406ca1adc1967bc532224.png"] ~ div::before {--border-color: #000000;}
+/* YouTube */
+.connectedAccountIcon-3_EQqg[src="/assets/25ec573cf82ee36d12296628f6bec11b.png"] ~ div::before {--border-color: #D9252A;}
+/* Facebook */
+.connectedAccountIcon-3_EQqg[src="/assets/3d189c41ce8155dfebf86ba2d1acfbbc.png"] ~ div::before {--border-color: #2D3283;}
+/* LOL */
+.connectedAccountIcon-3_EQqg[src="/assets/a0e2182e843745c73f7f3c8325a05ea9.png"] ~ div::before {--border-color: #CEA146;}
+
+
+
+
+
+/* Animated Pings */
+.numberBadge-2s8kKX {
+  animation: animatedPing 1.3s infinite ease-in-out;
+}
+@keyframes animatedPing {
+  0% {
+    transform: rotate(-12deg);
+  }
+  50% {
+    transform: rotate(12deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}

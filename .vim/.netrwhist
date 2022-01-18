@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/wolfgang/.config/picom'
 let g:netrw_dirhist_4='/home/wolfgang/gitclones/dotfiles/.config/flameshot'
 let g:netrw_dirhist_3='/home/wolfgang/Documents/urmillabot'
 let g:netrw_dirhist_2='/home/alokesh/.config/awesome/themes/nordish'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_9='/root'
 let g:netrw_dirhist_8='/home/alokesh/.config/fish/functions'
 let g:netrw_dirhist_7='/home/alokesh/.config/awesome/widgets'
 let g:netrw_dirhist_6='/home/alokesh/.config/awesome'
-let g:netrw_dirhist_5='/home/alokesh/.config/awesome/widgets'

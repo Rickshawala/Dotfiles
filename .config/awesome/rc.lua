@@ -153,7 +153,7 @@ awful.util.terminal = terminal
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
-awful.util.tagnames = { "games", "discord", "firefox", "terminal", "spotify", "zoom", "more1", "more2" }
+awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "zoom", "more1", "more2" }
 -- Use this : https://fontawesome.com/cheatsheet
 --awful.util.tagnames = { "", "", "", "", "" }
 --
@@ -313,6 +313,10 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "z", function () awful.util.spawn( "emacsclient -ce -a emacs" ) end,
         {description = "emacs", group = "apps"}),
 
+    -- feh background change
+    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/wolfgang/Pictures/wallpapers/" ) end,
+        {description = "background change", group = "apps"}),
+
     -- xkill
     awful.key({ modkey, "Shift" }, "c", function () awful.util.spawn( "xkill" ) end,
         {description = "xkill", group = "apps"}),
@@ -340,10 +344,15 @@ globalkeys = my_table.join(
     -- Rofi- alt tab
     awful.key({ modkey}, "Tab", function () awful.util.spawn( "rofi -show window" ) end,
         {description = "Switch Windows with Rofi", group = "hotkeys"}),
+
+    -- dolphin over pcmanfm
+    awful.key({ modkey}, "e", function () awful.util.spawn( "dolphin --platformtheme qt5ct" ) end,
+        {description = "Dolphin FM", group = "hotkeys"}),
+
       
     -- Pcmanfm
-    awful.key({ modkey }, "e", function () awful.util.spawn( "pcmanfm" ) end,
-        {description = "Pcmanfm", group = "apps"}),
+--    awful.key({ modkey }, "e", function () awful.util.spawn( "pcmanfm" ) end,
+--        {description = "Pcmanfm", group = "apps"}),
   
     -- Libre Office
     awful.key({ modkey }, "g", function () awful.util.spawn( "libreoffice" ) end,
