@@ -1,30 +1,39 @@
-# dotfiles for Rickshawala
+# Dotfiles by Rickshawala
 
+Dependencies:
+Fantasque nerd fonts [AUR](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono/)  
+tdrop [AUR](https://aur.archlinux.org/packages/tdrop/)  
+Rofi   
+Starship prompt [here](https://starship.rs/)  
+theFuck [here](https://github.com/nvbn/thefuck)  
 
-
-.config:
-  BetterDiscord: OC
-  Alacritty: OC
-  Awesome Config: https://github.com/MrJakeSir/dots
-  EWW: vanilla (should change someday)
-  Fish: From Garuda Linux
-  Flameshot: Basically changed a filepath
-  Neofetch: vanilla (should change someday)
-  picom: https://github.com/MrJakeSir/dots
-  ranger: literally just one line
-  rofi: https://github.com/joni22u/rofi
-
-Suckless:
-  dmenu: OC
-  dwm: vanilla (won't change anytime soon)
-  st: vanilla (won't change anytime soon)
+Colour Theme: 
+# [Cyberpunk Neon by Roboron3042](https://github.com/Roboron3042/Cyberpunk-Neon)  
+Everything is based on this guy's work  
   
-Home:
-  .bashrc: OC
-  .vimrc: OC
   
-.config/old-rice
-  There's a readme there
+  
+[Neon Icons by CSKANANI](https://store.kde.org/p/1358970/)  
+[Punk Cyan cursors by RTL88](https://store.kde.org/p/1333537/) Alternative: [Color Cursord by WMK69](https://store.kde.org/p/999761/)  
+[Spicetify- Dribbblish](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Dribbblish)  
 
-.config/outsiders
-  There's a readme there
+
+Contents:  
+
+.config:  
+  BetterDiscord: OC  
+  Alacritty: OC but inspired from Garuda Linux  
+  Awesome: "fork" of https://github.com/MrJakeSir/dots. That repo has since changed a lot  
+  Dunst: Just changed a few colours  
+  Fish: From Garuda Linux  
+  picom: Jonahburg   
+  ranger: literally just one line  
+  rofi: [one](https://github.com/joni22u/rofi) and [two]( https://www.reddit.com/r/unixporn/comments/qnyihv/oc_few_rofi_themes_pt_2/) but he has since deleted his account so yikes  
+
+Suckless:  
+  dmenu: OC  
+
+Home:  
+  .bashrc: OC  
+  .vimrc: OC theme Cyberpunk 
+  .zhsrc: OC  

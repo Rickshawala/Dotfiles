@@ -1,7 +1,7 @@
 set fish_greeting
 
 set EDITOR "vim"
-set VISUAL "emacs -c -a emacs"
+set VISUAL "emacs -c -a kate"
 set TERM "alacritty"
 
 thefuck --alias | source
@@ -61,6 +61,9 @@ alias nano="vim"
 #alias cat="bat --style header --style rules --style snip --style changes --style header"
 alias mv="mv -iv"
 alias cp="cp -iv"
+alias rm="rm -iv"
+alias mkdir="mkdir -pv"
+alias systemctl="sudo systemctl"
 
 #fun
 alias btw="sudo"
@@ -69,6 +72,7 @@ alias :wq="exit"
 alias :q="exit"
 alias brag="neofetch --cpu_temp C --ascii_distro windows7"
 alias klear="clear" #kde users lol
+alias DIDIFUCKINGSTUTTER="sudo !!"
 
 colorscript random 
 
