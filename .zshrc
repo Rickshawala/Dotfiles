@@ -1,24 +1,43 @@
-export EDITOR="vim"
-export VISUAL="emacsclient -c -a emacs"
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+source $HOME/.zsh/zsh-auto-notify/auto-notify.plugin.zsh
+source $HOME/.zsh/zsh-you-should-use/you-should-use.plugin.zsh
 
 bindkey -v
 
-alias ls="ls -lAgh | lolcat"
+##ALIAS
+#ls'es
+#alias ls="ls -lAgh | lolcat"
+#alias ls="lsd -lAh | lolcat"
+alias lsd="lsd -lah"
+alias ls="exa -al --color=always --group-directories-first --icons"
+
+#useful
 alias ipa="ip -c a"
+alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias updatee="yay --noconfirm"
+alias nano="vim"
+alias cat="bat --style header --style rules --style snip --style changes --style header"
+alias mv="mv -iv"
+alias cp="cp -iv"
+alias rm="rm -iv"
+alias mkdir="mkdir -pv"
+alias systemctl="sudo systemctl"
+alias ..="cd .."
+
+#fun
 alias btw="sudo"
 alias h="fuck"
 alias :wq="exit"
 alias :q="exit"
-alias brag="neofetch --cpu_temp c --ascii_distro windows7"
-alias updatee="sudo aura -Syyu --noconfirm && sudo aura -Ayyu --noconfirm"
-alias lsd="lsd -lah | lolcat"
-alias cat="bat"
-alias nano="vim"
-alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-
-function ngroke{
-	ngrok tcp -region in 25565
-}
+alias brag="neofetch --cpu_temp C --ascii_distro windows7"
+alias klear="clear" #kde users lol
+alias DIDIFUCKINGSTUTTER="sudo !!"
 
 colorscript random
 
