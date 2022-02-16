@@ -56,7 +56,7 @@ alias ls="exa -al --color=always --group-directories-first --icons"
 #useful
 alias ipa="ip -c a"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-alias updatee="sudo aura -Syu --noconfirm && sudo aura -Ayu --noconfirm"
+alias updatee="yay"
 alias nano="vim"
 #alias cat="bat --style header --style rules --style snip --style changes --style header"
 alias mv="mv -iv"

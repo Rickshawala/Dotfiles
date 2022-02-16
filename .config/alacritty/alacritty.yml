@@ -530,7 +530,7 @@ shape: Underline
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
- program: /bin/zsh
+ program: /bin/fish
 # args:
 #  --login
 

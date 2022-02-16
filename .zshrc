@@ -1,12 +1,12 @@
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/zsh-autosuggestions.zsh
 
-source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.zsh/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-source $HOME/.zsh/zsh-auto-notify/auto-notify.plugin.zsh
-source $HOME/.zsh/zsh-you-should-use/you-should-use.plugin.zsh
+source $HOME/.zsh/auto-notify.plugin.zsh
+source $HOME/.zsh/you-should-use.plugin.zsh
 
 bindkey -v
 
@@ -41,4 +41,5 @@ alias DIDIFUCKINGSTUTTER="sudo !!"
 
 colorscript random
 
+unset ZSH_AUTOSUGGEST_USE_ASYNC
 eval "$(starship init zsh)"

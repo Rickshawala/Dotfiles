@@ -42,7 +42,7 @@ run emacs --daemon
 run secret-tool lookup keepass allah | keepassxc --pw-stdin /home/wolfgang/Documents/keepass.kdbx
 run gromit-mpx --key F8 --undo-key F7
 run alacritty -e cat /home/alokesh/Documents/todo.list
-#run tailscale-systray
+run tailscale-systray
 #you can set wallpapers in themes as well
 
 #run applications from startup

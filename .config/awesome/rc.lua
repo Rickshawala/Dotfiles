@@ -147,7 +147,7 @@ local virtualmachine    = "virtualbox"
 -- awesome variables
 awful.util.terminal = terminal
 -- Use this : https://fontawesome.com/cheatsheet
-awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "zoom", "more1", "more2", "more3" }
+awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "zoom", "more1", "more2", "more3" } --doscord is an personal reference, just uncomment another line or rename these ones
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
@@ -482,7 +482,7 @@ clientkeys = my_table.join(
     awful.key({ modkey,           }, "u",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
 
-    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "alacritty -e vim /home/alokesh/.config/awesome/rc.lua" ) end,
+    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "alacritty -e vim /home/wolfgang/.config/awesome/rc.lua" ) end,
               {description = "open the config", group = "hotkeys"}),
 
 
