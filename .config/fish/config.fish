@@ -1,14 +1,5 @@
 set fish_greeting
-
-set EDITOR "vim"
-set VISUAL "emacs -c -a kate"
-set TERM "alacritty"
-
 thefuck --alias | source
-
-if test -n "$DESKTOP_SESSION"
-    set -x (gnome-keyring-daemon --start | string split "=")
-end
 
 #FUNCTIONS
 
@@ -40,11 +31,6 @@ else
   bind '$' __history_previous_command_arguments
 end
 
-#NGROK
-function ngroke
-        ngrok tcp -region in 25565
-end
-
 ##ALIAS
 
 #ls'es
@@ -54,11 +40,18 @@ alias lsd="lsd -lah"
 alias ls="exa -al --color=always --group-directories-first --icons"
 
 #useful
+alias ngroke="ngrok tcp -region in 25565"
 alias ipa="ip -c a"
+#alias lsblk="lsblk -e whatever major number snap apps have"
+#alias df="df -hx squashfs"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias dotfilesep="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME push git@github.com:Rickshawala/dotfiles"
+alias dotfilesea="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add"
+alias dotfilesec="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commit -m"
+alias dotfilesewhat="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME diff --staged"
 alias updatee="yay"
 alias nano="vim"
-#alias cat="bat --style header --style rules --style snip --style changes --style header"
+alias cat="bat --style header --style rules --style snip --style changes --style header"
 alias mv="mv -iv"
 alias cp="cp -iv"
 alias rm="rm -iv"

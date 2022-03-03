@@ -4,6 +4,7 @@ Dependencies:
 Fantasque nerd fonts [AUR](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono/)  
 Starship prompt [here](https://starship.rs/)  
 theFuck [here](https://github.com/nvbn/thefuck)  
+feh
 
 It is in the config but not necessary:
 tdrop [AUR](https://aur.archlinux.org/packages/tdrop/)  
@@ -25,7 +26,7 @@ Contents:
 .config:  
   BetterDiscord: OC  
   Alacritty: OC but inspired from Garuda Linux  
-  Awesome: "fork" of https://github.com/MrJakeSir/dots. That repo has since changed a lot  
+  Awesome: "fork" of https://github.com/MrJakeSir/dots. That repo has since changed a lot. Rename sachin to your usename
   dunst: Just changed a few colours  
   fish: Custom     
   gromit-mpx: changed a few keybinds     
@@ -42,5 +43,5 @@ Suckless:
 
 Home:     
   .bashrc: OC      
-  .vimrc: OC, theme Cyberpunk     
-  .zhsrc: OC       
+  .vimrc: OC, theme Cyberpunk git clone [YCM](https://github.com/ycm-core/YouCompleteMe) in .vim/bundle/YouCompleteMe, run install.py and follow whatever errors it throws at you. Then run :PluginInstall at launch      
+  .zshrc: some plugins and the same cyberpunk theme

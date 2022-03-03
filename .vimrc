@@ -6,7 +6,8 @@ filetype indent on
 set wildmenu
 set showmatch
 " set termguicolors
-colorscheme cyberpunk-neon
+"colorscheme cyberpunk-neon
+colorscheme levuaska
 
 
 "vundle stuff

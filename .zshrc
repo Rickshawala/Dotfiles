@@ -5,9 +5,12 @@ source $HOME/.zsh/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 source $HOME/.zsh/auto-notify.plugin.zsh
 source $HOME/.zsh/you-should-use.plugin.zsh
 
+#vim style keybinds
 bindkey -v
 
 ##ALIAS

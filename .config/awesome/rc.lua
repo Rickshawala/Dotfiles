@@ -35,7 +35,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
 -- }}}
--- for moving the windows around in float mode, I haven't found a better solution yet
+-- for moving the windows around in float mode, I havent found a better solution yet
 require("collision")()
 
 
@@ -79,7 +79,7 @@ end
 do
    local in_error = false
    awesome.connect_signal("debug::error", function (err)
-        -- Make sure we don't go into an endless error loop
+        -- Make sure we dont go into an endless error loop
         if in_error then return end
         in_error = true
 
@@ -197,7 +197,7 @@ awful.util.taglist_buttons = my_table.join(
 )
 
 
--- If you're going to use a tasklist, uncomment all of these lines!
+-- If youre going to use a tasklist, uncomment all of these lines!
 
 --awful.util.tasklist_buttons = my_table.join(
 --    awful.button({ }, 1, function (c)
@@ -297,11 +297,7 @@ globalkeys = my_table.join(
         {description = "emacs", group = "apps"}),
 
     -- feh background change
-    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/wolfgang/Pictures/wallpapers/" ) end,
-        {description = "background change", group = "apps"}),
-
-    -- easyssh the ssh client
-    awful.key({ modkey }, "a", function () awful.util.spawn( "flatpak run com.github.muriloventuroso.easyssh" ) end,
+    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/sachin/Pictures/wallpapers/" ) end,
         {description = "background change", group = "apps"}),
 
     -- xkill
@@ -482,14 +478,14 @@ clientkeys = my_table.join(
     awful.key({ modkey,           }, "u",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
 
-    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "alacritty -e vim /home/wolfgang/.config/awesome/rc.lua" ) end,
+    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "alacritty -e vim /home/sachin/.config/awesome/rc.lua" ) end,
               {description = "open the config", group = "hotkeys"}),
 
 
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
+            -- minimized, since minimized clients cant have the focus.
             c.minimized = true
         end ,
         {description = "minimize", group = "client"}),
@@ -561,6 +557,7 @@ for i = 1, 9 do
     )
 end
 
+-- move floating windows by holding mod and mousebuttons
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)
         c:emit_signal("request::activate", "mouse_click", {raise = true})
