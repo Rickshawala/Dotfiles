@@ -36,7 +36,7 @@ local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
 -- }}}
 -- for moving the windows around in float mode, I havent found a better solution yet
-require("collision")()
+
 
 
 
@@ -147,7 +147,7 @@ local virtualmachine    = "virtualbox"
 -- awesome variables
 awful.util.terminal = terminal
 -- Use this : https://fontawesome.com/cheatsheet
-awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "zoom", "more1", "more2", "more3" } --doscord is an personal reference, just uncomment another line or rename these ones
+awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }

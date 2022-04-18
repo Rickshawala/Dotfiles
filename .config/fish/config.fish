@@ -31,6 +31,12 @@ else
   bind '$' __history_previous_command_arguments
 end
 
+function suckmake
+  rm config.h
+  sudo make clean install
+end
+
+
 ##ALIAS
 
 #ls'es
@@ -49,7 +55,7 @@ alias dotfilesep="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME push 
 alias dotfilesea="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add"
 alias dotfilesec="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commit -m"
 alias dotfilesewhat="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME diff --staged"
-alias updatee="yay"
+alias updatee="yay --no-confirm"
 alias nano="vim"
 alias cat="bat --style header --style rules --style snip --style changes --style header"
 alias mv="mv -iv"
@@ -57,6 +63,7 @@ alias cp="cp -iv"
 alias rm="rm -iv"
 alias mkdir="mkdir -pv"
 alias systemctl="sudo systemctl"
+alias takenotes="vim ~/Notes/todo.list"
 
 #fun
 alias btw="sudo"
@@ -66,6 +73,7 @@ alias :q="exit"
 alias brag="neofetch --cpu_temp C --ascii_distro windows7"
 alias klear="clear" #kde users lol
 alias DIDIFUCKINGSTUTTER="sudo !!"
+alias ieditedetcdefaultgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 colorscript random 
 

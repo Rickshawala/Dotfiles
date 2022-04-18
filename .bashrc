@@ -36,6 +36,8 @@ alias :q="exit"
 alias brag="neofetch --cpu_temp C --ascii_distro windows7"
 alias klear="clear" #kde users lol
 alias DIDIFUCKINGSTUTTER="sudo !!"
+alias ieditedetcdefaultgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias takenotes="vim ~/Notes/todo.list"
 
 #autocd
 shopt -s autocd

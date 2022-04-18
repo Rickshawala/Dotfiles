@@ -33,10 +33,10 @@ Contents:
   kitty: Cyberpunk colours     
   picom: Jonahburg   
   ranger: literally just one line  
-  OpenRGB: Custom RGB profile for AMD wraith Prism
-  qt5ct because it caused me a lot of pain to configure last time
-  rofi: [one](https://github.com/joni22u/rofi) and [two]( https://www.reddit.com/r/unixporn/comments/qnyihv/oc_few_rofi_themes_pt_2/) but he has since deleted his account so yikes   
-	the_other_rofi: is [this](https://www.reddit.com/r/unixporn/comments/sgsbdv/oc_rofi_for_everything/) and [this](https://github.com/niraj998/Rofi-Scripts)
+  OpenRGB: Custom RGB profile for AMD wraith Prism      
+  qt5ct because it caused me a lot of pain to configure last time      
+  rofi: [one](https://github.com/joni22u/rofi) and [two]( https://www.reddit.com/r/unixporn/comments/qnyihv/oc_few_rofi_themes_pt_2/) but he has since deleted his account so yikes        
+	the_other_rofi: is [this](https://www.reddit.com/r/unixporn/comments/sgsbdv/oc_rofi_for_everything/) and [this](https://github.com/niraj998/Rofi-Scripts)     
 
 Suckless:  
   dmenu: OC  
