@@ -8,7 +8,7 @@ Starship prompt [here](https://starship.rs/)
 theFuck [here](https://github.com/nvbn/thefuck)  
 feh
 
-It is in the config but not necessary:
+It is in the config but not necessary:        
 tdrop [AUR](https://aur.archlinux.org/packages/tdrop/)  
 Rofi   
 
@@ -32,9 +32,9 @@ Contents:
 .config:  
   BetterDiscord: OC  
   Alacritty: OC but inspired from Garuda Linux  
-  Awesome: "fork" of https://github.com/MrJakeSir/dots. That repo has since changed a lot. Rename mohanlal to your usename
+  Awesome: "fork" of https://github.com/MrJakeSir/dots. That repo has since changed a lot. Rename mohanlal to your usename                    
   dunst: Just changed a few colours  
-  fish: Custom     
+  fish: OC 	      
   gromit-mpx: changed a few keybinds     
   kitty: Cyberpunk colours     
   picom: Jonahburg   
