@@ -297,7 +297,7 @@ globalkeys = my_table.join(
         {description = "emacs", group = "apps"}),
 
     -- feh background change
-    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/sachin/Pictures/wallpapers/" ) end,
+    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/mohanlal/Pictures/wallpapers/" ) end,
         {description = "background change", group = "apps"}),
 
     -- xkill
@@ -478,7 +478,7 @@ clientkeys = my_table.join(
     awful.key({ modkey,           }, "u",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
 
-    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "alacritty -e vim /home/sachin/.config/awesome/rc.lua" ) end,
+    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "alacritty -e vim /home/mohanlal/.config/awesome/rc.lua" ) end,
               {description = "open the config", group = "hotkeys"}),
 
 

@@ -18,22 +18,12 @@ run emacs --daemon
 #run numlockx on
 run dunst
 #run barrier
-#run /home/wolfgang/gitclones/discordtarr/Discord
 run discord
-#run steam
-#run pa-applet
 run flameshot
-#run nm-applet
-#run ~/Documents/awesomewm.sh
-run pamac-tray
 run caffeine
-#autorandr horizontal
-#run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#run volumeicon
 run openrgb -p eafin.orp
 run nextcloud
-run kdeconnect-indicator
 run keepassxc
 run gromit-mpx --key F8 --undo-key F7
-run alacritty -e cat /home/sachin/Notes/todo.list
+run alacritty -e cat /home/mohanlal/Notes/todo.list
 run tailscale-systray
