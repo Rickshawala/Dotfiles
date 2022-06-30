@@ -1,11 +1,11 @@
-# Dotfiles by Rickshawala
+# Dotfiles by Rickshawala                                                  
 
-Dependencies:
-Fantasque nerd fonts [AUR](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono/)  
-Roboto fonts [here](https://fonts.google.com/specimen/Roboto)
-Jetbrains some indivisual font [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Bold/complete/JetBrains%20Mono%20Bold%20Nerd%20Font%20Complete.ttf)
-Starship prompt [here](https://starship.rs/)  
-theFuck [here](https://github.com/nvbn/thefuck)  
+Dependencies:                                                                   
+Fantasque nerd fonts [AUR](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono/)                                          
+Roboto fonts [here](https://fonts.google.com/specimen/Roboto)                                          
+Jetbrains some indivisual font [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Bold/complete/JetBrains%20Mono%20Bold%20Nerd%20Font%20Complete.ttf)                             
+Starship prompt [here](https://starship.rs/)                        
+theFuck [here](https://github.com/nvbn/thefuck)               
 feh
 
 It is in the config but not necessary:        
@@ -49,5 +49,10 @@ Suckless:
 
 Home:     
   .bashrc: OC      
-  .vimrc: OC, theme Cyberpunk git clone [YCM](https://github.com/ycm-core/YouCompleteMe) in .vim/bundle/YouCompleteMe, run install.py and follow whatever errors it throws at you. Then run :PluginInstall at launch      
+  .vimrc: OC, theme Cyberpunk, run                     
+		`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`                         
+		then run                        
+		`git clone https://github.com/ycm-core/YouCompleteMe .vim/bundle/YouCompleteMe`                                    
+		run install.py and follow whatever errors it throws at you. Then run :PluginInstall at launch
+
   .zshrc: some plugins and the same cyberpunk theme

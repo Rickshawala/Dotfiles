@@ -39,6 +39,9 @@ end
 
 ##ALIAS
 
+#required
+alias wget="wget --hsts-file="$XDG_DATA_HOME/wget-hsts""
+
 #ls'es
 #alias ls="ls -lAgh | lolcat"
 #alias ls="lsd -lAh | lolcat"
@@ -65,6 +68,19 @@ alias mkdir="mkdir -pv"
 alias systemctl="sudo systemctl"
 alias takenotes="vim ~/Notes/todo.list"
 
+# default apps for items
+alias edit="vim"
+alias picture="sxiv"
+alias picture2="feh"
+alias video="mpv"
+alias video2="vlc"
+alias music="elisa"
+alias music2="mpv"
+alias music3="vlc"
+alias pdf="okular"
+alias pdf2="firefox"
+
+
 #fun
 alias btw="sudo"
 alias h="fuck"
@@ -78,3 +94,4 @@ alias ieditedetcdefaultgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 colorscript random 
 
 starship init fish |source
+fish_add_path /home/ykp/.spicetify

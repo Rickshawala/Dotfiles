@@ -6,6 +6,9 @@ export TERM="alacritty"
 
 ##ALIAS
 
+#required
+alias wget="wget --hsts-file="$XDG_DATA_HOME/wget-hsts""
+
 #ls'es
 #alias ls="ls -lAgh | lolcat"
 #alias ls="lsd -lAh | lolcat"

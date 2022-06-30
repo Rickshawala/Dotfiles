@@ -8,7 +8,7 @@ function run {
 }
 
 #xrandr --output DP-4 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --right-of DP-4
-feh --bg-fill --randomize ~/Pictures/wallpapers
+feh --no-fehbg --bg-fill --randomize ~/Pictures/wallpapers
 
 run picom --experimental-backend
 #run lxsession
