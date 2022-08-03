@@ -9,6 +9,11 @@ function run {
 
 #xrandr --output DP-4 --mode 1920x1080 --output HDMI-0 --mode 1920x1080 --right-of DP-4
 feh --no-fehbg --bg-fill --randomize ~/Pictures/wallpapers
+mpv --fullscreen \
+    --no-input-default-bindings \
+    --no-config \
+    --on-all-workspaces \
+    ~/Videos/memes/*.mp4 &
 
 run picom --experimental-backend
 #run lxsession

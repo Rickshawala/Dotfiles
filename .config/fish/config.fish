@@ -61,11 +61,10 @@ alias dotfilesewhat="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME di
 alias updatee="yay --no-confirm"
 alias nano="vim"
 alias cat="bat --style header --style rules --style snip --style changes --style header"
-alias mv="mv -iv"
-alias cp="cp -iv"
+alias mv="mv -riv"
+alias cp="cp -riv"
 alias rm="rm -iv"
 alias mkdir="mkdir -pv"
-alias systemctl="sudo systemctl"
 alias takenotes="vim ~/Notes/todo.list"
 
 # default apps for items
