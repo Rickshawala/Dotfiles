@@ -135,7 +135,7 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser3          = "firefox"
+local browser3          = "vialdi-stable"
 local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "emacsclient -ce -a kate"
 local filemanager       = "pcmanfm"
@@ -147,7 +147,7 @@ local virtualmachine    = "virtualbox"
 -- awesome variables
 awful.util.terminal = terminal
 -- Use this : https://fontawesome.com/cheatsheet
-awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
+awful.util.tagnames = { "games", "doscord", "vivaldi", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
@@ -288,8 +288,11 @@ root.buttons(my_table.join(
 -- {{{ Key bindings
 globalkeys = my_table.join(
 
+    --SYSTEM
+    -- Things will come soon
+
     -- browser
-    awful.key({ modkey }, "q", function () awful.util.spawn( "firefox" ) end,
+    awful.key({ modkey }, "q", function () awful.util.spawn( "vivaldi-stable" ) end,
         {description = "browser", group = "apps"}),
 
     -- emacs
@@ -297,7 +300,7 @@ globalkeys = my_table.join(
         {description = "emacs", group = "apps"}),
 
     -- feh background change
-    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/mohanlal/Pictures/wallpapers/" ) end,
+    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/ykp/Pictures/wallpapers/" ) end,
         {description = "background change", group = "apps"}),
 
     -- xkill
@@ -321,16 +324,24 @@ globalkeys = my_table.join(
         {description = "discord", group = "apps"}),
     
     -- Rofi / run a program
-    awful.key({ modkey }, "space", function () awful.util.spawn( "rofi -show drun" ) end,
+    awful.key({ modkey, "Shift" }, "space", function () awful.util.spawn( "rofi -show drun" ) end,
         {description = "Run program", group = "hotkeys"}),
-     
+
+    -- Rofi / Everything
+    awful.key({ modkey }, "space", function () awful.util.spawn( "rofi -show combi" ) end,
+        {description = "Run Everything", group = "hotkeys"}),
+ 
     -- Rofi- alt tab
-    awful.key({ modkey}, "Tab", function () awful.util.spawn( "rofi -show window" ) end,
+    awful.key({ modkey, "Shift" }, "Tab", function () awful.util.spawn( "rofi -show window" ) end,
         {description = "Switch Windows", group = "hotkeys"}),
 
-    -- dolphin 
-    awful.key({ modkey}, "e", function () awful.util.spawn( "dolphin --platformtheme qt5ct" ) end,
-        {description = "Dolphin FM", group = "apps"}),
+     -- Rofi- current tag alt tab
+    awful.key({ modkey}, "Tab", function () awful.util.spawn( "rofi -show windowcd" ) end,
+        {description = "Switch Windows in tag", group = "hotkeys"}),
+  
+    -- FM
+    awful.key({ modkey}, "e", function () awful.util.spawn( "pcmanfm" ) end,
+        {description = "FM", group = "apps"}),
 
     -- Libre Office
     awful.key({ modkey }, "g", function () awful.util.spawn( "libreoffice" ) end,
@@ -358,10 +369,17 @@ globalkeys = my_table.join(
 
     
     -- Non-empty tag browsing
-    --awful.key({ modkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
-              --{description = "view  previous nonempty", group = "tag"}),
-   -- awful.key({ modkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
-             -- {description = "view  next nonempty", group = "tag"}),
+    awful.key({ modkey, "Shift" }, "Left", function () lain.util.tag_view_nonempty(-1) end,
+      {description = "view  previous nonempty", group = "tag"}),
+    awful.key({ modkey, "Shift" }, "Right", function () lain.util.tag_view_nonempty(1) end,
+      {description = "view  next nonempty", group = "tag"}),
+    
+    -- Empty Tag Browsing
+    awful.key({ modkey }, "Left", function () awful.tag.viewprev() end,
+      {description = "view  previous empty", group = "tag"}),
+    awful.key({ modkey }, "Right", function () awful.tag.viewnext() end,
+      {description = "view  next empty", group = "tag"}),
+
 
     -- Default client focus
     awful.key({ modkey }, "j",

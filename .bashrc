@@ -29,6 +29,16 @@ alias cp="cp -riv"
 alias rm="rm -iv"
 alias mkdir="mkdir -pv"
 alias systemctl="sudo systemctl"
+alias doomsync="~/.emacs.d/bin/doom sync"
+
+
+#edit config files
+alias edawesome="vim ~/.config/awesome/rc.lua"
+alias edautoawesome="vim ~/.config/awesome/autostart.sh"
+alias edfish="vim ~/.config/fish/config.fish"
+alias edbash="vim ~/.bashrc"
+alias edalacritty="vim ~/.config/alacritty/alacritty.yml"
+alias edzsh="vim ~/.config/zsh/.zshrc"
 
 #fun
 alias btw="sudo"

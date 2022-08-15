@@ -66,6 +66,7 @@ alias cp="cp -riv"
 alias rm="rm -iv"
 alias mkdir="mkdir -pv"
 alias takenotes="vim ~/Notes/todo.list"
+alias doomsync="~/.emacs.d/bin/doom sync"
 
 # default apps for items
 alias edit="vim"
@@ -78,6 +79,15 @@ alias music2="mpv"
 alias music3="vlc"
 alias pdf="okular"
 alias pdf2="firefox"
+
+
+#edit config files
+alias edawesome="vim ~/.config/awesome/rc.lua"
+alias edautoawesome="vim ~/.config/awesome/autostart.sh"
+alias edfish="vim ~/.config/fish/config.fish"
+alias edbash="vim ~/.bashrc"
+alias edalacritty="vim ~/.config/alacritty/alacritty.yml"
+alias edzsh="vim ~/.config/zsh/.zshrc"
 
 
 #fun
@@ -94,3 +104,4 @@ colorscript random
 
 starship init fish |source
 fish_add_path /home/ykp/.spicetify
+#neofetch

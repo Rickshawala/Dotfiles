@@ -23,15 +23,15 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 -- Constants
 TERMINAL                                        = "alacritty"
---BROWSER                                         = "chromium"
+BROWSER                                         = "vivaldi-stable"
 
 
 local cybercolours ={
-    background = "#000b1e",
+    background = "#091833",
     cyan = "#0abdc6",
-    indigo= "#123e7c",
+    indigo= "#0abdc6",
     red = "#ff0000",
-    magenta = "#d300c4",
+    magenta = "#ea00d9",
     yellow = "#f57800",
     purple = "#711c91",
     white = "#d7d7d5",
