@@ -1,5 +1,5 @@
 configuration {
-	modi:				"drun,ssh,window,combi,windowcd";
+	modi:				"drun,ssh,window,combi,windowcd,filebrowser";
 	font:				"Rubik 10";
 	show-icons:                     true;
 	icon-theme: 			"Reversal-dark";

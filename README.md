@@ -53,6 +53,6 @@ Home:
   .vim: OC, theme Cyberpunk, run                     
 		`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`                         
 		then run                        
-		`git clone https://github.com/ycm-core/YouCompleteMe .vim/bundle/YouCompleteMe`                                    
-		run install.py and follow whatever errors it throws at you. Then run :PluginInstall at launch
+		`git clone https://github.com/ycm-core/YouCompleteMe ~/.vim/bundle/YouCompleteMe`                                    
+		run ~/.vim/bundle/YouCompleteMe/install.py and follow whatever errors it throws at you. Then run :PluginInstall at launch
 

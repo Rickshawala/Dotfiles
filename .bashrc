@@ -1,6 +1,3 @@
-export EDITOR="vim"
-export VISUAL="emacsclient -C -a kate"
-export TERM="alacritty"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -39,6 +36,7 @@ alias edfish="vim ~/.config/fish/config.fish"
 alias edbash="vim ~/.bashrc"
 alias edalacritty="vim ~/.config/alacritty/alacritty.yml"
 alias edzsh="vim ~/.config/zsh/.zshrc"
+alias edkitty="vim ~/.config/kitty/kitty.conf"
 
 #fun
 alias btw="sudo"

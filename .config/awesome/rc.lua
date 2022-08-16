@@ -141,7 +141,7 @@ local editorgui         = "emacsclient -ce -a kate"
 local filemanager       = "pcmanfm"
 local mailclient        = "thunderbird"
 local mediaplayer       = "spotify"
-local terminal          = "alacritty"
+local terminal          = "kitty"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
@@ -340,15 +340,19 @@ globalkeys = my_table.join(
         {description = "Switch Windows in tag", group = "hotkeys"}),
   
     -- FM
-    awful.key({ modkey}, "e", function () awful.util.spawn( "pcmanfm" ) end,
+    awful.key({ modkey, "Shift" }, "e", function () awful.util.spawn( "pcmanfm" ) end,
         {description = "FM", group = "apps"}),
+   
+    -- FM- rofi
+    awful.key({ modkey }, "e", function () awful.util.spawn( "rofi -show filebrowser" ) end,
+        {description = "FM -rofi", group = "apps"}),
 
     -- Libre Office
     awful.key({ modkey }, "g", function () awful.util.spawn( "libreoffice" ) end,
         {description = "Office", group = "apps"}),
 
     -- Scratchpad Alacritty
-     awful.key({ modkey, "Shift" }, "Return", function () awful.util.spawn( "tdrop -am -x 50% -y 50 -w 1341 -h 980 alacritty" ) end,
+     awful.key({ modkey, "Shift" }, "Return", function () awful.util.spawn( "tdrop -am -x 50% -y 50 -w 1341 -h 980 kitty" ) end,
  	{description = "Scratchpad Alacritty", group = "scratchpad"}),
 
     -- Thunderbird scratchpad
@@ -496,7 +500,7 @@ clientkeys = my_table.join(
     awful.key({ modkey,           }, "u",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
 
-    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "alacritty -e vim /home/mohanlal/.config/awesome/rc.lua" ) end,
+    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "kitty -e vim /home/mohanlal/.config/awesome/rc.lua" ) end,
               {description = "open the config", group = "hotkeys"}),
 
 
