@@ -1,0 +1,194 @@
+live_config_reload = true
+#shape = "Underline"
+#window_opacity = 0.877
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x1c61c2"
+blue = "0x00ff00"
+cyan = "0x0abdc6"
+green = "0xd300c4"
+magenta = "0x711c91"
+red = "0xff0000"
+white = "0xd7d7d5"
+yellow = "0xf57800"
+
+[colors.dim]
+black = "0x1c61c2"
+blue = "0x123e7c"
+cyan = "0x0abdc6"
+green = "0xd300c4"
+magenta = "0x711c91"
+red = "0xff0000"
+white = "0xd7d7d5"
+yellow = "0xf57800"
+
+[colors.normal]
+black = "0x123e7c"
+blue = "0x123e7c"
+cyan = "0x0abdc6"
+green = "0xd300c4"
+magenta = "0x711c91"
+red = "0xff0000"
+white = "0xd7d7d5"
+yellow = "0xf57800"
+
+[colors.primary]
+background = "0x000b1e"
+foreground = "0x0abdc6"
+
+[font]
+size = 15
+
+[font.bold]
+family = "Iosevka NF"
+
+[font.bold_italic]
+family = "Iosevka NF"
+
+[font.italic]
+family = "Iosevka NF"
+
+[font.normal]
+family = "Iosevka NF"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[mouse]
+hide_when_typing = false
+
+#[schemes.cyberpunk.bright]
+#black = "0x1c61c2"
+#blue = "0x00ff00"
+#cyan = "0x0abdc6"
+#green = "0xd300c4"
+#magenta = "0x711c91"
+#red = "0xff0000"
+#white = "0xd7d7d5"
+#yellow = "0xf57800"
+#
+#[schemes.cyberpunk.dim]
+#black = "0x1c61c2"
+#blue = "0x123e7c"
+#cyan = "0x0abdc6"
+#green = "0xd300c4"
+#magenta = "0x711c91"
+#red = "0xff0000"
+#white = "0xd7d7d5"
+#yellow = "0xf57800"
+#
+#[schemes.cyberpunk.normal]
+#black = "0x123e7c"
+#blue = "0x123e7c"
+#cyan = "0x0abdc6"
+#green = "0xd300c4"
+#magenta = "0x711c91"
+#red = "0xff0000"
+#white = "0xd7d7d5"
+#yellow = "0xf57800"
+#
+#[schemes.cyberpunk.primary]
+#background = "0x000b1e"
+#foreground = "0x0abdc6"
+#
+#[schemes.garuda.bright]
+#black = "0xa6896b"
+#blue = "0xF35645"
+#cyan = "0xFAD32F"
+#green = "0xEB3247"
+#magenta = "0xF6A73B"
+#red = "0x5F4149"
+#white = "0xeec49a"
+#yellow = "0xBC4349"
+#
+#[schemes.garuda.cursor]
+#cursor = "0xeec49a"
+#text = "0x0a1124"
+#
+#[schemes.garuda.normal]
+#black = "0x0a1124"
+#blue = "0xF35645"
+#cyan = "0xFAD32F"
+#green = "0xEB3247"
+#magenta = "0xF6A73B"
+#red = "0x5F4149"
+#white = "0xeec49a"
+#yellow = "0xBC4349"
+#
+#[schemes.garuda.primary]
+#background = "0x0a1124"
+#foreground = "0xeec49a"
+#
+#[schemes.solarized-dark.bright]
+#black = "#002b36"
+#blue = "#839496"
+#cyan = "#93a1a1"
+#green = "#586e75"
+#magenta = "#6c71c4"
+#red = "#cb4b16"
+#white = "#fdf6e3"
+#yellow = "#657b83"
+#
+#[schemes.solarized-dark.cursor]
+#cursor = "#839496"
+#text = "#002b36"
+#
+#[schemes.solarized-dark.normal]
+#black = "#073642"
+#blue = "#268bd2"
+#cyan = "#2aa198"
+#green = "#859900"
+#magenta = "#d33682"
+#red = "#dc322f"
+#white = "#eee8d5"
+#yellow = "#b58900"
+#
+#[schemes.solarized-dark.primary]
+#background = "#002b36"
+#foreground = "#839496"
+
+[selection]
+save_to_clipboard = true
+
+[shell]
+program = "/bin/fish"

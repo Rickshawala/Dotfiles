@@ -39,8 +39,9 @@ Contents:
   ranger: literally just one line  
   OpenRGB: Custom RGB profile for AMD wraith Prism      
   qt5ct because it caused me a lot of pain to configure last time      
-  rofi: [one](https://github.com/joni22u/rofi) and [two]( https://www.reddit.com/r/unixporn/comments/qnyihv/oc_few_rofi_themes_pt_2/) but he has since deleted his account so yikes        
+  rofi: [one](https://github.com/joni22u/rofi) and [two]( https://www.reddit.com/r/unixporn/comments/qnyihv/oc_few_rofi_themes_pt_2/) but he has since deleted his account so yikes                                
 	the_other_rofi: is [this](https://www.reddit.com/r/unixporn/comments/sgsbdv/oc_rofi_for_everything/) and [this](https://github.com/niraj998/Rofi-Scripts)     
+	reddit-2-rofi: is [this](https://github.com/adi1090x/rofi)                        
   zsh: some plugins, the same cyberpunk theme and some extensions                      
 
 Suckless:  
