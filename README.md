@@ -22,9 +22,9 @@ Everything is based on this guy's work
 [Punk Cyan cursors by RTL88](https://store.kde.org/p/1333537/) Alternative: [Color Cursors by WMK69](https://store.kde.org/p/999761/)  
 [Spicetify- Dribbblish](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Dribbblish)       
 Grub themes:	
-	[Dedsec](https://github.com/vandalsoul/dedsec-grub2-theme/)	
+	[Dedsec](https://github.com/vandalsoul/dedsec-grub2-theme/)	     
 Sddm Themes:	
-	[Abstract Arch](https://www.pling.com/p/1580200)     
+	[Abstract Arch](https://www.pling.com/p/1580200)         
       
 
 Contents:  
@@ -35,8 +35,6 @@ Contents:
   Awesome: "fork" of https://github.com/MrJakeSir/dots. That repo has since changed a lot. Rename mohanlal to your usename                    
   dunst: Just changed a few colours  
   fish: OC 	      
-  gromit-mpx: changed a few keybinds     
-  kitty: Cyberpunk colours     
   picom: Jonahburg   
   ranger: literally just one line  
   OpenRGB: Custom RGB profile for AMD wraith Prism      

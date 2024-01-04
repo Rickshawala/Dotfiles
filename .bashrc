@@ -20,7 +20,7 @@ alias df="df -hx squashfs"
 alias dotfilese="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias updatee="yay"
 alias nano="vim"
-alias cat="bat --style header --style rules --style snip --style changes --style header"
+#alias cat="bat --style header --style rules --style snip --style changes --style header"
 alias mv="mv -riv"
 alias cp="cp -riv"
 alias rm="rm -iv"
@@ -51,10 +51,6 @@ alias takenotes="vim ~/Notes/todo.list"
 
 #autocd
 shopt -s autocd
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
-# END_KITTY_SHELL_INTEGRATION
 
 cowsay "Ramram" | lolcat
 

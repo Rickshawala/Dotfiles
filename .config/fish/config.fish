@@ -60,7 +60,7 @@ alias dotfilesec="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commi
 alias dotfilesewhat="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME diff --staged"
 alias updatee="yay --no-confirm"
 alias nano="vim"
-alias cat="bat --style header --style rules --style snip --style changes --style header"
+#alias cat="bat --style header --style rules --style snip --style changes --style header"
 alias mv="mv -riv"
 alias cp="cp -riv"
 alias rm="rm -iv"
@@ -100,6 +100,7 @@ alias brag="neofetch --cpu_temp C --ascii_distro windows7"
 alias klear="clear" #kde users lol
 alias DIDIFUCKINGSTUTTER="sudo !!"
 alias ieditedetcdefaultgrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias yayy="parui -p=yay"
 
 colorscript random 
 
