@@ -1,9 +1,9 @@
 # Dotfiles by Rickshawala                                                  
 
 Dependencies:                                                                   
-Fantasque nerd fonts [AUR](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono/)                                          
+Fantasque nerd fonts [AUR](https://aur.archlinux.org/packages/ttf-fantasque-sans-mono/)                                          
 Roboto fonts [here](https://fonts.google.com/specimen/Roboto)                                          
-Jetbrains some indivisual font [here](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Bold/complete/JetBrains%20Mono%20Bold%20Nerd%20Font%20Complete.ttf)                             
+Jetbrains some indivisual font (Included in .Config, Just install it)        
 Starship prompt [here](https://starship.rs/)                        
 theFuck [here](https://github.com/nvbn/thefuck)               
 feh
