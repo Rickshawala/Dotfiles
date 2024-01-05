@@ -1,7 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
-    "height": 50, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+    "height": 50, // Waybar height (to be removed for auto height) // "width": 1280, // Waybar width
     "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
@@ -80,7 +79,7 @@
         "format-icons": ["", "", ""]
     },
     "backlight": {
-        // "device": "acpi_video1",
+        "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -97,9 +96,6 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
 //    "network": {
 //        // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -141,8 +137,7 @@
 	"modules":[
 		"battery",
 		"backlight",
-		"battery#bat2",
-		"keybaord-state"
+		"keyboard-state"
 		]
 	}
 }

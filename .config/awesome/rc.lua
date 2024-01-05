@@ -147,7 +147,11 @@ local virtualmachine    = "virtualbox"
 -- awesome variables
 awful.util.terminal = terminal
 -- Use this : https://fontawesome.com/cheatsheet
+<<<<<<< HEAD
 awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
+=======
+awful.util.tagnames = { "games", "doscord", "browser", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
+>>>>>>> 98101a2622d5c1c3b26098b50b8ddae09c14ffc8
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
@@ -300,19 +304,23 @@ globalkeys = my_table.join(
         {description = "emacs", group = "apps"}),
 
     -- feh background change
-    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/ykp/Pictures/wallpapers/" ) end,
+    awful.key({ modkey }, "y", function () awful.util.spawn( "feh --bg-fill --randomize /home/ykperson/Pictures/wallpapers/" ) end,
         {description = "background change", group = "apps"}),
 
     -- xkill
     awful.key({ modkey, "Shift" }, "c", function () awful.util.spawn( "xkill" ) end,
         {description = "xkill", group = "apps"}),
 
+    -- Definitions
+    awful.key({ modkey, }, "`", function () awful.util.spawn( "sh /home/ykperson/Documents/linuxe/sh/word-lookup.sh" ) end,
+        {description = "define", group = "apps"}),
+
     -- spotify
-    awful.key({ modkey }, "r", function () awful.util.spawn( "spotify" ) end,
+    awful.key({ modkey }, "r", function () awful.util.spawn( "flatpak run com.spotify.client" ) end,
         {description = "spotify", group = "apps"}),
 
     -- minecraft
-    awful.key({ modkey }, "t", function () awful.util.spawn( "minecraft-launcher" ) end,
+    awful.key({ modkey }, "t", function () awful.util.spawn( "flatpak run com.mojang.Minecraft" ) end,
         {description = "minecraft", group = "apps"}),
 
     -- flameshot
@@ -320,7 +328,7 @@ globalkeys = my_table.join(
         {description = "flameshot- screenshot utility" , group = "apps"}),
 
     -- Discord
-    awful.key({ modkey }, "d", function () awful.util.spawn( "discord" ) end,
+    awful.key({ modkey }, "d", function () awful.util.spawn( "flatpak run com.discordapp.Discord" ) end,
         {description = "discord", group = "apps"}),
     
     -- Rofi / run a program
@@ -415,6 +423,21 @@ globalkeys = my_table.join(
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
 
+
+    --Asus Specific
+
+    awful.key({ }, "XF86KbdBrightnessDown", function () awful.util.spawn( "asusctl -p" ) end,
+              {description = BrightnessDown , group = "utilities"}),
+
+    awful.key({ }, "XF86KbdBrightnessUp", function () awful.util.spawn( "asusctl -n" ) end,
+              {description = BrightnessUp , group = "utilities"}),
+
+    awful.key({ }, "XF86Launch1", function () awful.util.spawn( "keepassxc" ) end,
+              {description = terminal , group = "utilities"}),
+
+    awful.key({ }, "XF86Launch3", function () awful.util.spawn( "asusctl led-mode -n" ) end,
+              {description = NextColour , group = "utilities"}),
+
     -- Show/Hide Wibox
     awful.key({ modkey }, "b", function ()
             for s in screen do
@@ -493,7 +516,7 @@ clientkeys = my_table.join(
     awful.key({ modkey,           }, "u",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
 
-    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "kitty -e vim /home/mohanlal/.config/awesome/rc.lua" ) end,
+    awful.key({ modkey,           }, "i",   function () awful.util.spawn( "kitty -e vim /home/ykperson/.config/awesome/rc.lua" ) end,
               {description = "open the config", group = "hotkeys"}),
 
 

@@ -1,6 +1,11 @@
 live_config_reload = true
 #shape = "Underline"
-#window_opacity = 0.877
+#window_opacity = 0.8
+[window]
+dynamic_padding = true
+opacity = 0.877
+title = "Alacritty"
+
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -191,4 +196,4 @@ hide_when_typing = false
 save_to_clipboard = true
 
 [shell]
-program = "/bin/fish"
+program = "/usr/bin/fish"
