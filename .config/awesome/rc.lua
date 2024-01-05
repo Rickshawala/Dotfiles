@@ -135,19 +135,19 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser3          = "vialdi-stable"
+local browser3          = "firefox"
 local editor            = os.getenv("EDITOR") or "vim"
 local editorgui         = "emacsclient -ce -a kate"
-local filemanager       = "pcmanfm"
+local filemanager       = "flatpak run org.kde.dolphin"
 local mailclient        = "thunderbird"
 local mediaplayer       = "spotify"
-local terminal          = "kitty"
+local terminal          = "alacritty"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
 -- Use this : https://fontawesome.com/cheatsheet
-awful.util.tagnames = { "games", "doscord", "vivaldi", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
+awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
@@ -292,7 +292,7 @@ globalkeys = my_table.join(
     -- Things will come soon
 
     -- browser
-    awful.key({ modkey }, "q", function () awful.util.spawn( "vivaldi-stable" ) end,
+    awful.key({ modkey }, "q", function () awful.util.spawn( "firefox" ) end,
         {description = "browser", group = "apps"}),
 
     -- emacs
@@ -340,7 +340,7 @@ globalkeys = my_table.join(
         {description = "Switch Windows in tag", group = "hotkeys"}),
   
     -- FM
-    awful.key({ modkey, "Shift" }, "e", function () awful.util.spawn( "pcmanfm" ) end,
+    awful.key({ modkey, "Shift" }, "e", function () awful.util.spawn( "flatpak run org.kde.dolphin" ) end,
         {description = "FM", group = "apps"}),
    
     -- FM- rofi
@@ -436,14 +436,7 @@ globalkeys = my_table.join(
               {description = terminal , group = "apps"}),
 
     awful.key({ modkey, "Control" }, "r", awesome.restart,
-              {description = "reload awesome", group = "awesome"}),
-
-    awful.key({ modkey, }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-              {description = "increase master width factor", group = "layout"}),
-
-    awful.key({ modkey, }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-              {description = "decrease master width factor", group = "layout"}),
-
+              {description = "reload awesome", group = "awesome"}), awful.key({ modkey, }, "l",     function () awful.tag.incmwfact( 0.05)          end, {description = "increase master width factor", group = "layout"}), awful.key({ modkey, }, "h",     function () awful.tag.incmwfact(-0.05)          end, {description = "decrease master width factor", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
               {description = "increase the number of master clients", group = "layout"}),
 
