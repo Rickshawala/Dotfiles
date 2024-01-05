@@ -61,15 +61,9 @@ alias dotfilesewhat="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME di
 alias updatee="yay --no-confirm"
 alias nano="vim"
 #alias cat="bat --style header --style rules --style snip --style changes --style header"
-<<<<<<< HEAD
 #alias mv="mv -riv"
 #alias cp="cp -riv"
 #alias rm="rm -iv"
-=======
-alias mv="mv -riv"
-alias cp="cp -riv"
-alias rm="rm -iv"
->>>>>>> 98101a2622d5c1c3b26098b50b8ddae09c14ffc8
 alias mkdir="mkdir -pv"
 alias takenotes="vim ~/Notes/todo.list"
 alias doomsync="~/.emacs.d/bin/doom sync"
