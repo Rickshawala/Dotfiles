@@ -147,11 +147,7 @@ local virtualmachine    = "virtualbox"
 -- awesome variables
 awful.util.terminal = terminal
 -- Use this : https://fontawesome.com/cheatsheet
-<<<<<<< HEAD
-awful.util.tagnames = { "games", "doscord", "firefox", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
-=======
 awful.util.tagnames = { "games", "doscord", "browser", "terminal", "spotify", "क", "ख", "ग", "घ" } --doscord is an personal reference, just uncomment another line or rename these ones
->>>>>>> 98101a2622d5c1c3b26098b50b8ddae09c14ffc8
 --awful.util.tagnames = {  "", "", "", "", ""}
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }

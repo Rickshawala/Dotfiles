@@ -56,3 +56,4 @@ cowsay "Ramram" | lolcat
 
 eval "$(thefuck --alias)"
 eval "$(starship init bash)"
+eval "$(atuin init bash)"
