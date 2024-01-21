@@ -105,5 +105,6 @@ alias yayy="parui -p=yay"
 colorscript random 
 
 starship init fish |source
+atuin init fish | source
 fish_add_path /home/ykp/.spicetify
 #neofetch
