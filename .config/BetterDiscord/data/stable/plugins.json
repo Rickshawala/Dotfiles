@@ -21,5 +21,6 @@
     "SpotifyControls": false,
     "TypingUsersAvatars": false,
     "Animations": false,
-    "SpotifyListenAlong": false
+    "SpotifyListenAlong": false,
+    "Double Click To Edit": false
 }

@@ -8,24 +8,26 @@
 
 /* Cyberpunk-Neon colorscheme */
 @define-color dark-blue		#000b1e;
-@define-color blue			#091833;
+@define-color blue		#091833;
+@define-color bluetrans		rgba(09, 18, 33, 0.6);
 @define-color light-blue	#133e7c;
 @define-color light-alt		#0b2956;
-@define-color cyan			#0abdc6;
-@define-color pink			#ea00d9;
+@define-color cyan		#0abdc6;
+@define-color pink		#ea00d9;
 @define-color purple		#711c91;
 @define-color purple-alt	#321959;
-@define-color red			#ff0000;
+@define-color red		#ff0000;
 @define-color orange		#f57800;
-@define-color white			#d7d7d5;
+@define-color white		#d7d7d5;
 @define-color yellow		#ffff00;
-@define-color green			#00ff00;
+@define-color green		#00ff00;
 
 
 window#waybar {
 	font-size: 16px;
 	font-family: "Monaspace Xenon";
 	background: @blue;
+;
 	color: @cyan;
 }
 
@@ -57,12 +59,13 @@ window#waybar {
 	color: @purple-alt;
 	background: @blue;
 }
+#custom-swaync {
+    	background-color: @light-alt;
+    	color: @cyan;
+    	padding: 0 22px 0 15px;
+}
 
-#custom-mastodon,
-#custom-twitter,
-#custom-github,
-#custom-reddit,
-#custom-traktv,
+
 #clock,
 #memory,
 #cpu,
@@ -84,9 +87,9 @@ window#waybar {
 	background: @light-alt;
 }
 
-#workspaces button {
+/*#workspaces button {
 	background: @light-alt;
-	padding: 0 0px;
+	padding: 0 10px;
 	color: @cyan;
 }
 #workspaces button.focused {
@@ -99,21 +102,9 @@ window#waybar {
 #workspaces button:hover {
 	background: @purple;
 	border: none;
-	padding: 0 0px;
+	padding: 0 10px;
 }
-
-#custom-mastodon{
-	color: @pink;
-}
-#custom-github{
-	color: @white;
-}
-#custom-reddit{
-	color: @orange;
-}
-#custom-traktv{
-	color: @red;
-}
+*/
 
 #clock{
 	color: @pink;
@@ -135,4 +126,43 @@ window#waybar {
 }
 #custom-pacman{
 	color: @orange;
+}
+#workspaces button {
+    padding: 0 12px;
+    background: @light-alt;
+    color: @cyan;
+    font-size: 24px;
+}
+
+#workspaces button.empty {
+    color: @light-blue;
+    background-color: @light-alt;
+}
+
+#workspaces button.visible {
+    color: @pink;
+    background-color: @light-alt;
+}
+
+#workspaces button.active {
+    color: @pink;
+    background: @light-alt;
+}
+
+#workspaces button.urgent {
+    background-color: @light-alt;
+    color: @yellow;
+}
+
+#workspaces button:hover {
+    color: @purple-alt;
+    box-shadow: none;
+    background: @light-alt;
+}
+
+
+#window {
+    color: @pink;
+    background-color: @light-alt;
+    padding: 0 6px;
 }

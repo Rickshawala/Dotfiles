@@ -39,6 +39,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'farmergreg/vim-lastplace'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'gko/vim-coloresque'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

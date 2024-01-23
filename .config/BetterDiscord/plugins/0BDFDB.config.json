@@ -1,23 +1,27 @@
 {
-	"changeLogs": {
-		"CreationDate": "1.4.6",
-		"FriendNotifications": "1.8.1",
-		"LastMessageDate": "1.2.8",
-		"ServerDetails": "1.1.1",
-		"ShowHiddenChannels": "3.0.3",
-		"SplitLargeMessages": "1.7.0",
-		"SpotifyControls": "1.2.4"
-	},
-	"choices": {
-		"toastPosition": "right"
-	},
-	"general": {
-		"showToasts": true,
-		"showSupportBadges": true,
-		"useChromium": false
-	},
-	"hashes": {
-		"0BDFDB.data.json": "a485715019970a30abc55c2a0b8f00bf3240974a",
-		"0BDFDB.raw.css": "a1036e10077b9457f3903795204f7dbd91d7646d"
+	"all": {
+		"changeLogs": {
+			"BDFDB": "3.5.9",
+			"CreationDate": "1.4.6",
+			"FriendNotifications": "1.8.1",
+			"LastMessageDate": "1.2.8",
+			"ServerDetails": "1.1.1",
+			"ShowHiddenChannels": "3.0.3",
+			"SplitLargeMessages": "1.7.0",
+			"SpotifyControls": "1.2.4"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"shareData": true,
+			"showToasts": true,
+			"showSupportBadges": true,
+			"useChromium": false
+		},
+		"hashes": {
+			"0BDFDB.data.json": "37e2001d7e6dc1d3d771e222cd9a1cf2bd43da63",
+			"0BDFDB.raw.css": "8c083e2a87a82aded5f3b2e27fb8b2f816b5f74a"
+		}
 	}
 }

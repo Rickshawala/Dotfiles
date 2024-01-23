@@ -3,12 +3,14 @@
 {
 	"layer": "top",
 	"position": "top",
+	"spacing": 0,
 
 	"modules-left": [
 		"hyprland/workspaces",
 		"custom/right-arrow-workspaces",
+		//"mpris",
 		"custom/right-arrow-shortcuts",
-		"mpd",
+		//"cava",
 		"custom/right-arrow-mpd",
 	],
 	"modules-center": [
@@ -18,7 +20,6 @@
 	],
 	"modules-right": [
 		"custom/left-arrow-pulse",
-		"custom/mpd-vol",
 		"pulseaudio",
 		"custom/left-arrow-modules",
 		"memory",
@@ -27,8 +28,10 @@
 		"disk",
 		"custom/pacman",
 		"battery",
+		"backlight",
 		"custom/left-arrow-tray",
 		"tray",
+		"custom/swaync",
 		"custom/exit"
 	],
 
@@ -72,36 +75,23 @@
 		"format": "",
 		"tooltip": false
 	},
-
-	"sway/workspaces": {
-		"disable-scroll": false,
-		"format": "{name}"
-	},
-	"custom/mastodon": {
-		"format": "ﳄ",
-		"on-click": "xdg-open https://im-in.space/",
-		"on-click-right": "xdg-open https://cybre.space/",
-		"tooltip": false
-	},
-	"custom/twitter": {
-		"format": "",
-		"on-click": "xdg-open https://tweetdeck.twitter.com/",
-		"tooltip": false
-	},
-	"custom/github": {
-		"format": "",
-		"on-click": "xdg-open https://github.com",
-		"tooltip": false
-	},
-	"custom/reddit": {
-		"format": "樓",
-		"on-click": "$TERM -e tuir",
-		"tooltip": false
-	},
-	"custom/traktv": {
-		"format": "",
-		"on-click": "xdg-open https://trakt.tv/dashboard",
-		"tooltip": false
+	"hyprland/workspaces": {
+         "persistent-workspaces": {
+             "*": 5,},
+         "disable-scroll": false,
+         "show-special": true ,
+         "format": "{icon}",
+         "format-icons": {
+             "1":"",
+             "2":"",
+             "3":"",
+             "4":"",
+             "5":"",
+             "urgent":"",
+             "focused":"",
+             "default":"",
+             "special":"✪"
+	  },
 	},
 	"mpd": {
 		"max-length": 60,
@@ -132,7 +122,7 @@
 		"on-click-right": "cantata",
 		"on-scroll-down": "mpc next",
 		"on-scroll-up": "mpc prev",
-    },
+    	},
 
 
 
@@ -188,6 +178,8 @@
 			"critical": 15
 		},
 		"format": "{icon} {capacity}%",
+		"format-charging": "{capacity}% ",
+      		"format-plugged": "{capacity}% ",
 		"format-icons": [
 			"",
 			"",
@@ -200,7 +192,7 @@
 		"interval": 5,
 		"format": " {percentage_used}%",
 		"path": "/",
-		"on-click": "dolphin"
+		"on-click": "pcmanfm"
 	},
 	"custom/pacman": {
 		"format": " {}",
@@ -211,7 +203,7 @@
 		"signal": 8,
 	},
 	"tray": {
-		"icon-size": 20,
+	"icon-size": 20,
 		"spacing": 10
 	},
 	"custom/exit": {
@@ -220,5 +212,56 @@
 		"on-click": "swaymsg exit",
 		"on-click-right": "systemctl poweroff",
 		"on-click-middle": "systemctl reboot"
-	}
+	},
+    	"custom/swaync":{
+       		"format": "\uf476",
+        	"on-click": "sleep 0.1 && swaync-client -t -sw",
+        	"on-click-right": "sleep 0.1 && swaync-client -t -sw",
+        	"tooltip": "false"
+	},
+ 	"mpris": {
+        	"interval": 1,
+        	"format": "{player_icon} {dynamic}",
+        	"format-paused": "{status_toon} <i>{dynamic}</i>",
+        	"player-icons": {
+               		"default": "\u25b6",
+                	"mpv": "\ud83c\udfb5",
+                	"spotify": "\uf1bc",
+        	"status-icons": {
+               		"paused": "\u23f8"
+        	},
+        "dynamic-len": 20
+    	},
+    	"cava": {
+        	"cava_config": "/home/ykp/.config/cava/config",
+       		"framerate": 170,
+        	"autosens": 1,
+        	"bars": 20,
+        	"source": "auto",
+        	"stereo": true,
+        	"reverse": true,
+        	"bar_delimiter": 0,
+        	"monstercat": false,
+        	"waves": true,
+        	"input delay": 1,
+        	"noise_reduction": 0,
+        	"format-icons": [
+                	"\u2581",
+                	"\u2582",
+                	"\u2583",
+                	"\u2584",
+                	"\u2585",
+                	"\u2586",
+                	"\u2587",
+                	"\u2588"
+        	],
+        	"actions": {
+                	"on-click-right": "mode"},
+	},
+	"backlight": {
+        	"device": "acpi_video1",
+        	"format": "{percent}% {icon}",
+        	"format-icons": ["", "", "", "", "", "", "", "", ""]
+    	}
+}
 }
