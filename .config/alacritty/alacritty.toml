@@ -1,11 +1,10 @@
 live_config_reload = true
 #shape = "Underline"
-#window_opacity = 0.8
+
 [window]
 dynamic_padding = true
-opacity = 0.877
+opacity = 0.8
 title = "Alacritty"
-
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -45,19 +44,19 @@ background = "0x000b1e"
 foreground = "0x0abdc6"
 
 [font]
-size = 15
+size = 16
 
 [font.bold]
-family = "Iosevka NF"
+family = "Monaspace Xenon ExtraBold"
 
 [font.bold_italic]
-family = "Iosevka NF"
+family = "Monaspace Xenon Medium"
 
 [font.italic]
-family = "Iosevka NF"
+family = "Monaspace Xenon Extralight"
 
 [font.normal]
-family = "Iosevka NF"
+family = "Monaspace Xenon"
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -196,4 +195,4 @@ hide_when_typing = false
 save_to_clipboard = true
 
 [shell]
-program = "/usr/bin/fish"
+program = "/bin/fish"
